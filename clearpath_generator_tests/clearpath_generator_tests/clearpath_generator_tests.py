@@ -122,16 +122,20 @@ class TestSamples:
         dirs_cmp = filecmp.dircmp(dir_1, dir_2)
         # Log Only in Installed Directory
         if len(dirs_cmp.left_only) > 0:
-            error = f'Files/directories: {dirs_cmp.left_only}, '
-            f'only found in: {dir_1} '
-            f'not in: {dir_2}'
+            error = (
+                f'Files/directories: {dirs_cmp.left_only}, '
+                f'only found in: {dir_1} '
+                f'not in: {dir_2}'
+            )
             logs.append(error)
             summary_logs.append(error)
         # Log Only in Generated Directory
         if len(dirs_cmp.right_only) > 0:
-            error = f'Files/directories: {dirs_cmp.right_only}, '
-            f'only found in: {dir_2} '
-            f'not in: {dir_1}'
+            error = (
+                f'Files/directories: {dirs_cmp.right_only}, '
+                f'only found in: {dir_2} '
+                f'not in: {dir_1}'
+            )
             logs.append(error)
             summary_logs.append(error)
         # Compare Files
