@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="a300-00000">
+
+  <!-- Common -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/common.urdf.xacro"/>
+
+  <!-- Platform -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/a300.urdf.xacro"/>
+  <xacro:a300 control="diff_4wd" front_wheels="outdoor" rear_wheels="outdoor"/>
+
+
+  <!-- Attachments -->
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/bumper.urdf.xacro"/>
+  <xacro:bumper name="front_bumper" model="default" parent_link="front_bumper_mount" extension="0.2">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:bumper>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/bumper.urdf.xacro"/>
+  <xacro:bumper name="rear_bumper" model="default" parent_link="rear_bumper_mount" extension="0.2">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:bumper>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/top_plate.urdf.xacro"/>
+  <xacro:top_plate name="top_plate_default" model="default" parent_link="default_mount">
+    <origin xyz="0.0 -1.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:top_plate>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/top_plate.urdf.xacro"/>
+  <xacro:top_plate name="top_plate_pacs" model="pacs" parent_link="default_mount">
+    <origin xyz="0.0 1.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:top_plate>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/wireless_charger.urdf.xacro"/>
+  <xacro:wireless_charger name="wireless_charger" model="default" parent_link="base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:wireless_charger>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/amp_enclosure.urdf.xacro"/>
+  <xacro:amp_enclosure name="enclosure" model="amp_enclosure" parent_link="base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:amp_enclosure>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/amp_sensor_arch.urdf.xacro"/>
+  <xacro:amp_sensor_arch name="sensor_arch" model="amp_sensor_arch" parent_link="enclosure_antenna_mount">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:amp_sensor_arch>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/spotlight.urdf.xacro"/>
+  <xacro:spotlight name="driving_light_1" model="spotlight" parent_link="sensor_arch_front_left_corner_mount">
+    <origin xyz="0.0 0.0 -0.08" rpy="0.0 0.5235987755982988 0.5235987755982988"/>
+  </xacro:spotlight>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/spotlight.urdf.xacro"/>
+  <xacro:spotlight name="driving_light_2" model="spotlight" parent_link="sensor_arch_front_right_corner_mount">
+    <origin xyz="0.0 0.0 -0.08" rpy="0.0 0.5235987755982988 -0.5235987755982988"/>
+  </xacro:spotlight>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/spotlight.urdf.xacro"/>
+  <xacro:spotlight name="driving_light_3" model="spotlight" parent_link="sensor_arch_rear_left_corner_mount">
+    <origin xyz="0.0 0.0 -0.08" rpy="0.0 0.5235987755982988 -0.5235987755982988"/>
+  </xacro:spotlight>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a300/attachments/spotlight.urdf.xacro"/>
+  <xacro:spotlight name="driving_light_4" model="spotlight" parent_link="sensor_arch_rear_right_corner_mount">
+    <origin xyz="0.0 0.0 -0.08" rpy="0.0 0.5235987755982988 0.5235987755982988"/>
+  </xacro:spotlight>
+
+
+  <!-- Links -->
+
+
+  <!-- Mounts -->
+
+  <!-- riser_0 -->
+  <xacro:include filename="$(find clearpath_mounts_description)/urdf/pacs/riser.urdf.xacro"/>
+  <xacro:riser name="riser_0" parent_link="top_plate_pacs_mount_a1" rows="8" columns="7" thickness="0.00635">
+    <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0"/>
+  </xacro:riser>
+
+  <!-- riser_1 -->
+  <xacro:include filename="$(find clearpath_mounts_description)/urdf/pacs/riser.urdf.xacro"/>
+  <xacro:riser name="riser_1" parent_link="top_plate_pacs_mount_a8" rows="1" columns="7" thickness="0.00635">
+    <origin xyz="0.0 0.0 0.2" rpy="0.0 0.0 0.0"/>
+  </xacro:riser>
+
+  <!-- riser_2 -->
+  <xacro:include filename="$(find clearpath_mounts_description)/urdf/pacs/riser.urdf.xacro"/>
+  <xacro:riser name="riser_2" parent_link="top_plate_pacs_mount_c1" rows="4" columns="4" thickness="0.00635">
+    <origin xyz="0.0 0.0 0.3" rpy="0.0 0.0 0.0"/>
+  </xacro:riser>
+
+
+  <!-- Sensors -->
+
+  <!-- imu_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/phidgets_spatial.urdf.xacro"/>
+  <xacro:phidgets_spatial name="imu_0" parent_link="base_link">
+    <origin xyz="0.059 0.0 0.161275" rpy="0.0 0.0 0.0"/>
+  </xacro:phidgets_spatial>
+
+
+  <!-- Manipulators -->
+
+
+  <!-- Extras -->
+
+
+</robot>
