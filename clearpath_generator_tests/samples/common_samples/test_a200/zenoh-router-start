@@ -1,2 +1,0 @@
-source /opt/ros/jazzy/setup.bash
-echo "RMW Implementation is not Zenoh. If this was launched as a service then the service will now end."
