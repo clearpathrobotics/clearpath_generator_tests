@@ -11,6 +11,7 @@
 
   <depend>clearpath_generator_base_tests</depend>
   <depend>clearpath_generator_gz</depend>
+  <depend>ros2run</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
