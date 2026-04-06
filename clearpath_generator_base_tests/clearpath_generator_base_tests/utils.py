@@ -133,6 +133,11 @@ def diff_dir_trees(
     return logs, summary_logs
 
 
+def ensure_sample_dir_exists(sample_dir: str) -> None:
+    """Create the sample directory if it does not already exist."""
+    os.makedirs(sample_dir, exist_ok=True)
+
+
 def find_real_path_to_samples(path: str) -> str:
     """Find real path to sample YAML files."""
     for sample in os.listdir(path):

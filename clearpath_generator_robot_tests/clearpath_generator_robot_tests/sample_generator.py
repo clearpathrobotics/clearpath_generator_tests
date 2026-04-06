@@ -35,7 +35,7 @@ import os
 import shutil
 
 from ament_index_python.packages import get_package_share_directory
-from clearpath_generator_base_tests.utils import get_test_samples
+from clearpath_generator_base_tests.utils import ensure_sample_dir_exists, get_test_samples
 from clearpath_generator_robot.launch.generator import RobotLaunchGenerator
 from clearpath_generator_robot.param.generator import RobotParamGenerator
 
@@ -68,6 +68,7 @@ def error_log(name: str, sample: str, error: Exception) -> str:
 
 def generate_test_samples(root_dir: str):
     """Generate all files from robot generator."""
+    ensure_sample_dir_exists(root_dir)
     # Iterate through all samples in clearpath_config
     share_dir = get_package_share_directory('clearpath_config')
     sample_dir = os.path.join(share_dir, 'sample')
