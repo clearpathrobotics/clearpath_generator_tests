@@ -70,6 +70,11 @@ class TestGeneratorGzSamples(BaseGeneratorSampleTest):
         """Validate Gazebo sample generation."""
         generate_test_samples(self.NEW_SAMPLE_DIR)
 
+    def test_number_of_samples_match(self):
+        """Validate number of generated samples match installed."""
+        super().test_number_of_samples_match()
+        return
+
     def test_samples_match(self):
         """Validate contents of generated sample directory match."""
         super().test_samples_match()

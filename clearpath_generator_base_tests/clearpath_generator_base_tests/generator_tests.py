@@ -40,6 +40,7 @@ from typing import List
 from ament_index_python.packages import get_package_share_directory
 
 from clearpath_generator_base_tests.utils import (
+    ensure_sample_dir_exists,
     diff_dir_trees,
     get_test_samples,
     MismatchSampleException,
@@ -66,6 +67,7 @@ class BaseGeneratorSampleTest:
     GENERATOR_NAME = 'base'
     # Directory to generate samples
     NEW_SAMPLE_DIR = os.path.join(os.environ['HOME'], '.clearpath', 'samples')
+    ensure_sample_dir_exists(NEW_SAMPLE_DIR)
     # Directory of installed samples
     SHARE_DIR = get_package_share_directory('clearpath_generator_base_tests')
     INSTALLED_SAMPLE_DIR = os.path.join(SHARE_DIR, 'samples')
