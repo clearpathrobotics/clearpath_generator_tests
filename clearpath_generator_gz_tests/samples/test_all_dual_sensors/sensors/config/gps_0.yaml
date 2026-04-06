@@ -1,0 +1,5 @@
+- ros_topic_name: gps_0/fix
+  gz_topic_name: /cpr_generic_e/sensors/gps_0/navsat
+  ros_type_name: sensor_msgs/msg/NavSatFix
+  gz_type_name: gz.msgs.NavSat
+  direction: GZ_TO_ROS

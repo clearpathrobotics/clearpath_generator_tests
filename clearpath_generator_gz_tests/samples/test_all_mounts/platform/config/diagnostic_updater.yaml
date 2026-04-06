@@ -1,0 +1,14 @@
+cpr_generic_e:
+  clearpath_diagnostic_updater:
+    ros__parameters:
+      serial_number: 'generic-e'
+      platform_model: 'generic'
+      ros_distro: 'jazzy'
+      latest_apt_firmware_version: 'simulated'
+      installed_apt_firmware_version: 'simulated'
+      use_sim_time: True
+      bms_state_rate: 10.0
+      bms_state_tolerance: 0.15
+      mcu_protocol: 'uros'
+      topics.sensors/imu_0/data.type: 'sensor_msgs/msg/Imu'
+      topics.sensors/imu_0/data.rate: 50.0

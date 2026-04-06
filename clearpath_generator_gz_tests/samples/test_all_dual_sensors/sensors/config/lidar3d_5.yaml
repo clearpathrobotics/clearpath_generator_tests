@@ -1,0 +1,10 @@
+- ros_topic_name: lidar3d_5/scan
+  gz_topic_name: /cpr_generic_e/sensors/lidar3d_5/scan
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: gz.msgs.LaserScan
+  direction: GZ_TO_ROS
+- ros_topic_name: lidar3d_5/points
+  gz_topic_name: /cpr_generic_e/sensors/lidar3d_5/scan/points
+  ros_type_name: sensor_msgs/msg/PointCloud2
+  gz_type_name: gz.msgs.PointCloudPacked
+  direction: GZ_TO_ROS

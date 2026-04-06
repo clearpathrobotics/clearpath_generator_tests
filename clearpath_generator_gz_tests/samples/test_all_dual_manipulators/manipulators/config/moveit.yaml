@@ -1,0 +1,1342 @@
+cpr_generic_e:
+  move_group:
+    ros__parameters:
+      use_sim_time: True
+      robot_description_planning:
+        cartesian_limits:
+          max_trans_vel: 1.0
+          max_trans_acc: 2.25
+          max_trans_dec: -5.0
+          max_rot_vel: 1.57
+        default_velocity_scaling_factor: 0.5
+        default_acceleration_scaling_factor: 0.5
+        joint_limits:
+          lift_10_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_10_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_9_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_9_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_8_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_8_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_7_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_7_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_6_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_6_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_5_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_5_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_4_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_4_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_3_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_3_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_2_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_2_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_1_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_1_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_0_upper_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          lift_0_lower_joint:
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_22_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_21_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_19_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_18_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_16_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_15_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_13_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_12_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_10_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_9_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_7_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_6_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_4_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_3_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_2_gripper_finger_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_1_gripper_robotiq_85_left_knuckle_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_0_gripper_right_finger_bottom_joint:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_22_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_22_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_22_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_22_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_22_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_22_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_21_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_21_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_21_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_21_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_21_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_21_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_20_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_20_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_20_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_20_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_20_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_20_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_19_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_19_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_19_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_19_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_19_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_19_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_18_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_18_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_18_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_18_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_18_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_18_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_17_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_17_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_17_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_17_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_17_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_17_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_16_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_16_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_16_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_16_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_16_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_16_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_15_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_15_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_15_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_15_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_15_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_15_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_14_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_14_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_14_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_14_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_14_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_14_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_13_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_13_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_13_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_13_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_13_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_13_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_12_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_12_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_12_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_12_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_12_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_12_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_11_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_11_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_11_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_11_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_11_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_11_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_10_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_10_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_10_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_10_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_10_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_10_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_9_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_9_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_9_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_9_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_9_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_9_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_8_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_8_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_8_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_8_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_8_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_8_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_7_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_7_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_7_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_7_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_7_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_7_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_6_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_6_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_6_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_6_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_6_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_6_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_5_shoulder_pan_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_5_shoulder_lift_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_5_elbow_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_5_wrist_1_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_5_wrist_2_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_5_wrist_3_joint:
+            has_acceleration_limits: True
+            max_acceleration: 5.0
+          arm_4_joint_1:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_4_joint_2:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_4_joint_3:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_4_joint_4:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_4_joint_5:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_4_joint_6:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_4_joint_7:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_3_joint_1:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_3_joint_2:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_3_joint_3:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_3_joint_4:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_3_joint_5:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_3_joint_6:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_3_joint_7:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_2_joint_1:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_2_joint_2:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_2_joint_3:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_2_joint_4:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_2_joint_5:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_2_joint_6:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_1_joint_1:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_1_joint_2:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_1_joint_3:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_1_joint_4:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_1_joint_5:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_1_joint_6:
+            has_velocity_limits: True
+            max_velocity: 0.8727
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_0_joint_1:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_0_joint_2:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 0.5
+          arm_0_joint_3:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 0.4
+          arm_0_joint_4:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 1.0
+          arm_0_joint_5:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+          arm_0_joint_6:
+            has_velocity_limits: True
+            max_velocity: 0.5
+            has_acceleration_limits: True
+            max_acceleration: 10.0
+      moveit_controller_manager: 'moveit_simple_controller_manager/MoveItSimpleControllerManager'
+      moveit_simple_controller_manager:
+        controller_names: ['lift_10_joint_trajectory_controller', 'lift_9_joint_trajectory_controller', 'lift_8_joint_trajectory_controller', 'lift_7_joint_trajectory_controller', 'lift_6_joint_trajectory_controller', 'lift_5_joint_trajectory_controller', 'lift_4_joint_trajectory_controller', 'lift_3_joint_trajectory_controller', 'lift_2_joint_trajectory_controller', 'lift_1_joint_trajectory_controller', 'lift_0_joint_trajectory_controller', 'arm_22_gripper_controller', 'arm_21_gripper_controller', 'arm_19_gripper_controller', 'arm_18_gripper_controller', 'arm_16_gripper_controller', 'arm_15_gripper_controller', 'arm_13_gripper_controller', 'arm_12_gripper_controller', 'arm_10_gripper_controller', 'arm_9_gripper_controller', 'arm_7_gripper_controller', 'arm_6_gripper_controller', 'arm_4_gripper_controller', 'arm_3_gripper_controller', 'arm_2_gripper_controller', 'arm_1_gripper_controller', 'arm_0_gripper_controller', 'arm_22_joint_trajectory_controller', 'arm_21_joint_trajectory_controller', 'arm_20_joint_trajectory_controller', 'arm_19_joint_trajectory_controller', 'arm_18_joint_trajectory_controller', 'arm_17_joint_trajectory_controller', 'arm_16_joint_trajectory_controller', 'arm_15_joint_trajectory_controller', 'arm_14_joint_trajectory_controller', 'arm_13_joint_trajectory_controller', 'arm_12_joint_trajectory_controller', 'arm_11_joint_trajectory_controller', 'arm_10_joint_trajectory_controller', 'arm_9_joint_trajectory_controller', 'arm_8_joint_trajectory_controller', 'arm_7_joint_trajectory_controller', 'arm_6_joint_trajectory_controller', 'arm_5_joint_trajectory_controller', 'arm_4_joint_trajectory_controller', 'arm_3_joint_trajectory_controller', 'arm_2_joint_trajectory_controller', 'arm_1_joint_trajectory_controller', 'arm_0_joint_trajectory_controller']
+        lift_10_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_10_lower_joint']
+        lift_9_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_9_lower_joint']
+        lift_8_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_8_lower_joint']
+        lift_7_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_7_lower_joint']
+        lift_6_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_6_lower_joint']
+        lift_5_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_5_lower_joint']
+        lift_4_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_4_lower_joint']
+        lift_3_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_3_lower_joint']
+        lift_2_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_2_lower_joint']
+        lift_1_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_1_lower_joint']
+        lift_0_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['lift_0_lower_joint']
+        arm_22_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_22_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_21_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_21_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_19_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_19_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_18_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_18_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_16_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_16_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_15_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_15_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_13_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_13_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_12_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_12_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_10_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_10_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_9_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_9_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_7_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_7_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_6_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_6_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_4_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_4_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_3_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_3_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_2_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_2_gripper_finger_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_1_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_1_gripper_robotiq_85_left_knuckle_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_0_gripper_controller:
+          type: 'GripperCommand'
+          joints: ['arm_0_gripper_right_finger_bottom_joint']
+          action_ns: 'gripper_cmd'
+          default: True
+        arm_22_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_22_shoulder_pan_joint', 'arm_22_shoulder_lift_joint', 'arm_22_elbow_joint', 'arm_22_wrist_1_joint', 'arm_22_wrist_2_joint', 'arm_22_wrist_3_joint']
+        arm_21_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_21_shoulder_pan_joint', 'arm_21_shoulder_lift_joint', 'arm_21_elbow_joint', 'arm_21_wrist_1_joint', 'arm_21_wrist_2_joint', 'arm_21_wrist_3_joint']
+        arm_20_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_20_shoulder_pan_joint', 'arm_20_shoulder_lift_joint', 'arm_20_elbow_joint', 'arm_20_wrist_1_joint', 'arm_20_wrist_2_joint', 'arm_20_wrist_3_joint']
+        arm_19_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_19_shoulder_pan_joint', 'arm_19_shoulder_lift_joint', 'arm_19_elbow_joint', 'arm_19_wrist_1_joint', 'arm_19_wrist_2_joint', 'arm_19_wrist_3_joint']
+        arm_18_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_18_shoulder_pan_joint', 'arm_18_shoulder_lift_joint', 'arm_18_elbow_joint', 'arm_18_wrist_1_joint', 'arm_18_wrist_2_joint', 'arm_18_wrist_3_joint']
+        arm_17_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_17_shoulder_pan_joint', 'arm_17_shoulder_lift_joint', 'arm_17_elbow_joint', 'arm_17_wrist_1_joint', 'arm_17_wrist_2_joint', 'arm_17_wrist_3_joint']
+        arm_16_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_16_shoulder_pan_joint', 'arm_16_shoulder_lift_joint', 'arm_16_elbow_joint', 'arm_16_wrist_1_joint', 'arm_16_wrist_2_joint', 'arm_16_wrist_3_joint']
+        arm_15_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_15_shoulder_pan_joint', 'arm_15_shoulder_lift_joint', 'arm_15_elbow_joint', 'arm_15_wrist_1_joint', 'arm_15_wrist_2_joint', 'arm_15_wrist_3_joint']
+        arm_14_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_14_shoulder_pan_joint', 'arm_14_shoulder_lift_joint', 'arm_14_elbow_joint', 'arm_14_wrist_1_joint', 'arm_14_wrist_2_joint', 'arm_14_wrist_3_joint']
+        arm_13_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_13_shoulder_pan_joint', 'arm_13_shoulder_lift_joint', 'arm_13_elbow_joint', 'arm_13_wrist_1_joint', 'arm_13_wrist_2_joint', 'arm_13_wrist_3_joint']
+        arm_12_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_12_shoulder_pan_joint', 'arm_12_shoulder_lift_joint', 'arm_12_elbow_joint', 'arm_12_wrist_1_joint', 'arm_12_wrist_2_joint', 'arm_12_wrist_3_joint']
+        arm_11_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_11_shoulder_pan_joint', 'arm_11_shoulder_lift_joint', 'arm_11_elbow_joint', 'arm_11_wrist_1_joint', 'arm_11_wrist_2_joint', 'arm_11_wrist_3_joint']
+        arm_10_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_10_shoulder_pan_joint', 'arm_10_shoulder_lift_joint', 'arm_10_elbow_joint', 'arm_10_wrist_1_joint', 'arm_10_wrist_2_joint', 'arm_10_wrist_3_joint']
+        arm_9_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_9_shoulder_pan_joint', 'arm_9_shoulder_lift_joint', 'arm_9_elbow_joint', 'arm_9_wrist_1_joint', 'arm_9_wrist_2_joint', 'arm_9_wrist_3_joint']
+        arm_8_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_8_shoulder_pan_joint', 'arm_8_shoulder_lift_joint', 'arm_8_elbow_joint', 'arm_8_wrist_1_joint', 'arm_8_wrist_2_joint', 'arm_8_wrist_3_joint']
+        arm_7_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_7_shoulder_pan_joint', 'arm_7_shoulder_lift_joint', 'arm_7_elbow_joint', 'arm_7_wrist_1_joint', 'arm_7_wrist_2_joint', 'arm_7_wrist_3_joint']
+        arm_6_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_6_shoulder_pan_joint', 'arm_6_shoulder_lift_joint', 'arm_6_elbow_joint', 'arm_6_wrist_1_joint', 'arm_6_wrist_2_joint', 'arm_6_wrist_3_joint']
+        arm_5_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_5_shoulder_pan_joint', 'arm_5_shoulder_lift_joint', 'arm_5_elbow_joint', 'arm_5_wrist_1_joint', 'arm_5_wrist_2_joint', 'arm_5_wrist_3_joint']
+        arm_4_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_4_joint_1', 'arm_4_joint_2', 'arm_4_joint_3', 'arm_4_joint_4', 'arm_4_joint_5', 'arm_4_joint_6', 'arm_4_joint_7']
+        arm_3_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_3_joint_1', 'arm_3_joint_2', 'arm_3_joint_3', 'arm_3_joint_4', 'arm_3_joint_5', 'arm_3_joint_6', 'arm_3_joint_7']
+        arm_2_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_2_joint_1', 'arm_2_joint_2', 'arm_2_joint_3', 'arm_2_joint_4', 'arm_2_joint_5', 'arm_2_joint_6']
+        arm_1_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_1_joint_1', 'arm_1_joint_2', 'arm_1_joint_3', 'arm_1_joint_4', 'arm_1_joint_5', 'arm_1_joint_6']
+        arm_0_joint_trajectory_controller:
+          type: 'FollowJointTrajectory'
+          action_ns: 'follow_joint_trajectory'
+          default: True
+          joints: ['arm_0_joint_1', 'arm_0_joint_2', 'arm_0_joint_3', 'arm_0_joint_4', 'arm_0_joint_5', 'arm_0_joint_6']
+      robot_description_kinematics:
+        lift_10:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_9:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_8:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_7:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_6:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_5:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_4:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_3:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_2:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_1:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        lift_0:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_22_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_21_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_19_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_18_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_16_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_15_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_13_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_12_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_10_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_9_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_7_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_6_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_4_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_3_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_2_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_1_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_0_gripper:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_22:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_21:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_20:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_19:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_18:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_17:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_16:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_15:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_14:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_13:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_12:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_11:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_10:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_9:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_8:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_7:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_6:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_5:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_4:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_3:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_2:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_1:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+        arm_0:
+          kinematics_solver: 'kdl_kinematics_plugin/KDLKinematicsPlugin'
+          kinematics_solver_search_resolution: 0.005
+          kinematics_solver_timeout: 0.005
+          kinematics_solver_attempts: 3
+      publish_planning_scene: True
+      publish_robot_description: False
+      publish_robot_description_semantic: True
+      publish_geometry_updates: True
+      publish_state_updates: True
+      publish_transforms_updates: True
+      pilz:
+        planning_plugins: ['pilz_industrial_motion_planner/CommandPlanner']
+        default_planner_config: 'PTP'
+        request_adapters: ['default_planning_request_adapters/ResolveConstraintFrames', 'default_planning_request_adapters/ValidateWorkspaceBounds', 'default_planning_request_adapters/CheckStartStateBounds', 'default_planning_request_adapters/CheckStartStateCollision']
+        response_adapters: ['default_planning_response_adapters/ValidateSolution', 'default_planning_response_adapters/DisplayMotionPath']
+        capabilities: 'pilz_industrial_motion_planner/MoveGroupSequenceAction pilz_industrial_motion_planner/MoveGroupSequenceService'
+        cartesian_limits:
+          max_trans_vel: 1.0
+          max_trans_acc: 2.25
+          max_trans_dec: -5.0
+          max_rot_vel: 1.57
+      ompl:
+        planning_plugins: ['ompl_interface/OMPLPlanner']
+        path_tolerance: 0.1
+        resample_dt: 0.1
+        min_angle_change: 0.001
+        default_workspace_bounds: 10.0
+        start_state_max_bounds_error: 0.1
+        start_state_max_dt: 0.5
+        jiggle_fraction: 0.05
+        max_sampling_attempts: 100
+        request_adapters: ['default_planning_request_adapters/ResolveConstraintFrames', 'default_planning_request_adapters/ValidateWorkspaceBounds', 'default_planning_request_adapters/CheckStartStateBounds', 'default_planning_request_adapters/CheckStartStateCollision']
+        response_adapters: ['default_planning_response_adapters/AddTimeOptimalParameterization', 'default_planning_response_adapters/ValidateSolution', 'default_planning_response_adapters/DisplayMotionPath']
+        planner_configs:
+          AnytimePathShortening:
+            type: 'geometric::AnytimePathShortening'
+            shortcut: True
+            hybridize: True
+            max_hybrid_paths: 24
+            num_planners: 4
+            planners: ''
+          SBL:
+            type: 'geometric::SBL'
+            range: 0.0
+          EST:
+            type: 'geometric::EST'
+            range: 0.0
+            goal_bias: 0.05
+          LBKPIECE:
+            type: 'geometric::LBKPIECE'
+            range: 0.0
+            border_fraction: 0.9
+            min_valid_path_fraction: 0.5
+          BKPIECE:
+            type: 'geometric::BKPIECE'
+            range: 0.0
+            border_fraction: 0.9
+            failed_expansion_score_factor: 0.5
+            min_valid_path_fraction: 0.5
+          KPIECE:
+            type: 'geometric::KPIECE'
+            range: 0.0
+            goal_bias: 0.05
+            border_fraction: 0.9
+            failed_expansion_score_factor: 0.5
+            min_valid_path_fraction: 0.5
+          RRT:
+            type: 'geometric::RRT'
+            range: 0.0
+            goal_bias: 0.05
+          RRTConnect:
+            type: 'geometric::RRTConnect'
+            range: 0.0
+          RRTstar:
+            type: 'geometric::RRTstar'
+            range: 0.0
+            goal_bias: 0.05
+            delay_collision_checking: 1
+          TRRT:
+            type: 'geometric::TRRT'
+            range: 0.0
+            goal_bias: 0.05
+            max_states_failed: 10
+            temp_change_factor: 2.0
+            min_temperature: '10e-10'
+            init_temperature: '10e-6'
+            frountier_threshold: 0.0
+            frountierNodeRatio: 0.1
+            k_constant: 0.0
+          PRM:
+            type: 'geometric::PRM'
+            max_nearest_neighbors: 10
+          PRMstar:
+            type: 'geometric::PRMstar'
+          FMT:
+            type: 'geometric::FMT'
+            num_samples: 1000
+            radius_multiplier: 1.1
+            nearest_k: 1
+            cache_cc: 1
+            heuristics: 0
+            extended_fmt: 1
+          BFMT:
+            type: 'geometric::BFMT'
+            num_samples: 1000
+            radius_multiplier: 1.0
+            nearest_k: 1
+            balanced: 0
+            optimality: 1
+            heuristics: 1
+            cache_cc: 1
+            extended_fmt: 1
+          PDST:
+            type: 'geometric::PDST'
+          STRIDE:
+            type: 'geometric::STRIDE'
+            range: 0.0
+            goal_bias: 0.05
+            use_projected_distance: 0
+            degree: 16
+            max_degree: 18
+            min_degree: 12
+            max_pts_per_leaf: 6
+            estimated_dimension: 0.0
+            min_valid_path_fraction: 0.2
+          BiTRRT:
+            type: 'geometric::BiTRRT'
+            range: 0.0
+            temp_change_factor: 0.1
+            init_temperature: 100
+            frountier_threshold: 0.0
+            frountier_node_ratio: 0.1
+            cost_threshold: '1e300'
+          LBTRRT:
+            type: 'geometric::LBTRRT'
+            range: 0.0
+            goal_bias: 0.05
+            epsilon: 0.4
+          BiEST:
+            type: 'geometric::BiEST'
+            range: 0.0
+          ProjEST:
+            type: 'geometric::ProjEST'
+            range: 0.0
+            goal_bias: 0.05
+          LazyPRM:
+            type: 'geometric::LazyPRM'
+            range: 0.0
+          LazyPRMstar:
+            type: 'geometric::LazyPRMstar'
+          SPARS:
+            type: 'geometric::SPARS'
+            stretch_factor: 3.0
+            sparse_delta_fraction: 0.25
+            dense_delta_fraction: 0.001
+            max_failures: 1000
+          SPARStwo:
+            type: 'geometric::SPARStwo'
+            stretch_factor: 3.0
+            sparse_delta_fraction: 0.25
+            dense_delta_fraction: 0.001
+            max_failures: 5000
+      chomp:
+        planning_plugins: ['chomp_interface/CHOMPPlanner']
+        enable_failure_recovery: True
+        jiggle_fraction: 0.05
+        request_adapters: ['default_planning_request_adapters/ResolveConstraintFrames', 'default_planning_request_adapters/ValidateWorkspaceBounds', 'default_planning_request_adapters/CheckStartStateBounds', 'default_planning_request_adapters/CheckStartStateCollision']
+        response_adapters: ['default_planning_response_adapters/AddTimeOptimalParameterization', 'default_planning_response_adapters/ValidateSolution', 'default_planning_response_adapters/DisplayMotionPath']
+        ridge_factor: 0.01
+        start_state_max_bounds_error: 0.1
+        path_tolerance: 0.1
+        resample_dt: 0.1
+        min_angle_change: 0.001
+        default_workspace_bounds: 10.0
+        start_state_max_dt: 0.5
+        max_sampling_attempts: 100
+      planning_pipelines: ['chomp', 'pilz', 'ompl']
+      default_planning_pipeline: 'ompl'
+      allow_trajectory_execution: True
+      moveit_manage_controllers: False
+      trajectory_execution:
+        allowed_execution_duration_scaling: 1.2
+        allowed_goal_duration_margin: 0.5
+        allowed_start_tolerance: 0.01
