@@ -4,8 +4,8 @@ a300_00000:
       serial_number: 'a300-00000'
       platform_model: 'a300'
       ros_distro: 'jazzy'
-      latest_apt_firmware_version: '3.0.1'
-      installed_apt_firmware_version: '3.0.1'
+      latest_apt_firmware_version: '3.0.3'
+      installed_apt_firmware_version: '3.0.3'
       bms_state_rate: 2.5
       bms_state_tolerance: 0.2
       mcu_protocol: 'uros'
