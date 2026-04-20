@@ -111,3 +111,7 @@ cpr_generic_e:
       topics.sensors/gps_7/fix.rate: 10.0
       topics.sensors/gps_8/fix.type: 'sensor_msgs/msg/NavSatFix'
       topics.sensors/gps_8/fix.rate: 10.0
+      topics.sensors/ptu_0/state.type: 'sensor_msgs/msg/JointState'
+      topics.sensors/ptu_0/state.rate: 10.0
+      topics.sensors/ptu_1/state.type: 'sensor_msgs/msg/JointState'
+      topics.sensors/ptu_1/state.rate: 10.0

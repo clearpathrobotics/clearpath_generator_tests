@@ -49,3 +49,6 @@ cpr_generic_e:
       sensors.analyzers.gps.type: 'diagnostic_aggregator/GenericAnalyzer'
       sensors.analyzers.gps.path: 'GPS'
       sensors.analyzers.gps.contains: ['gps']
+      sensors.analyzers.ptu.type: 'diagnostic_aggregator/GenericAnalyzer'
+      sensors.analyzers.ptu.path: 'PTU'
+      sensors.analyzers.ptu.contains: ['ptu']
