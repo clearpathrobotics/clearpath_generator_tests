@@ -68,12 +68,8 @@ cpr_generic_e:
       topics.sensors/imu_1/mag.rate: 20.0
       topics.sensors/imu_2/data.type: 'sensor_msgs/msg/Imu'
       topics.sensors/imu_2/data.rate: 100.0
-      topics.sensors/imu_2/mag.type: 'sensor_msgs/msg/MagneticField'
-      topics.sensors/imu_2/mag.rate: 0.0
       topics.sensors/imu_3/data.type: 'sensor_msgs/msg/Imu'
       topics.sensors/imu_3/data.rate: 100.0
-      topics.sensors/imu_3/mag.type: 'sensor_msgs/msg/MagneticField'
-      topics.sensors/imu_3/mag.rate: 0.0
       topics.sensors/imu_4/data.type: 'sensor_msgs/msg/Imu'
       topics.sensors/imu_4/data.rate: 50.0
       topics.sensors/imu_4/data_raw.type: 'sensor_msgs/msg/Imu'
