@@ -6,5 +6,6 @@ cpr_generic_e/sensors/ptu_0:
       tcp_port: 4000
       port: '/dev/ptu'
       limits_enabled: False
-      hz: 10.0
+      hz: 10
       default_velocity: 0.0
+      joint_name_prefix: 'ptu_0_'
