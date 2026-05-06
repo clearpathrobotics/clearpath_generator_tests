@@ -1,0 +1,11 @@
+cpr_generic_e/sensors/ptu_0:
+  ptu_driver:
+    ros__parameters:
+      connection_type: 'tcp'
+      ip_addr: '192.168.131.10'
+      tcp_port: 4000
+      port: '/dev/ptu'
+      limits_enabled: False
+      hz: 10
+      default_velocity: 0.0
+      joint_name_prefix: 'ptu_0_'

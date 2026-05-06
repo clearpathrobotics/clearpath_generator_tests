@@ -42,6 +42,11 @@
     <origin xyz="0.0 -1.5 0.0" rpy="0.0 0.0 0.0"/>
   </xacro:frame>
 
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/links/frame.urdf.xacro"/>
+  <xacro:frame name="ptu_row" parent_link="default_mount">
+    <origin xyz="0.0 -1.75 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:frame>
+
 
   <!-- Mounts -->
 
@@ -269,6 +274,18 @@
   <xacro:fixposition name="ins_1" parent_link="ins_row_link" num_antennas="2" gps_0_type="spherical" gps_0_xyz_x="0.0" gps_0_xyz_y="0.1" gps_0_xyz_z="0.25" gps_0_rpy_r="0.0" gps_0_rpy_p="0.0" gps_0_rpy_y="0.0" gps_0_parent="ins_row_link" gps_1_type="helical" gps_1_xyz_x="0.0" gps_1_xyz_y="-0.1" gps_1_xyz_z="0.25" gps_1_rpy_r="0.0" gps_1_rpy_p="0.0" gps_1_rpy_y="0.0" gps_1_parent="ins_row_link">
     <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
   </xacro:fixposition>
+
+  <!-- ptu_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/flir_ptu.urdf.xacro"/>
+  <xacro:flir_ptu name="ptu_0" parent_link="ptu_row_link" model="ptu5">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:flir_ptu>
+
+  <!-- ptu_1 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/flir_ptu.urdf.xacro"/>
+  <xacro:flir_ptu name="ptu_1" parent_link="ptu_row_link" model="d46">
+    <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+  </xacro:flir_ptu>
 
 
   <!-- Manipulators -->
