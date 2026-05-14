@@ -32,11 +32,10 @@
 # modification, is not permitted without the express permission
 # of Clearpath Robotics.
 
-import argparse
 import os
-from clearpath_generator_common_tests.sample_generator import (
-    generate_test_samples
-)
+
+from clearpath_generator_base_tests.utils import generate_samples_main
+from clearpath_generator_common_tests.sample_generator import generate_test_samples
 
 
 def main():
@@ -46,23 +45,13 @@ def main():
             os.path.dirname(
                 os.path.realpath(__file__))),
         'samples')
-    print(f'default_root_dir: {default_root_dir}')
-    # Get Root Directory from Args
-    parser = argparse.ArgumentParser(
+    generate_samples_main(
         prog='Clearpath Common Sample Generator',
-        description='Generate all common files from test samples in the clearpath_config package.',
+        description='Generate all common files from test samples '
+                    'in the clearpath_config package.',
+        generate_fn=generate_test_samples,
+        default_out=default_root_dir,
     )
-    parser.add_argument(
-        '--out',
-        help='Output directory of generated files.',
-        default=default_root_dir,
-        required=False)
-    args = parser.parse_args()
-
-    root_dir = os.path.abspath(args.out)
-    assert os.path.isdir(root_dir), f'Output directory "{root_dir}" does not exist.'
-
-    generate_test_samples(root_dir)
 
 
 if __name__ == '__main__':
