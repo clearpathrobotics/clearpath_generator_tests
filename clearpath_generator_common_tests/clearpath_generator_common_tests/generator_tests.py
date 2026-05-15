@@ -31,6 +31,7 @@
 # of Clearpath Robotics.
 
 import os
+from typing import List
 
 from ament_index_python.packages import get_package_share_directory
 
