@@ -29,28 +29,22 @@ a300_00000:
       preserve_turning_radius: True
       publish_limited_velocity: True
       publish_wheel_data: True
-      linear.x.has_velocity_limits: True
-      linear.x.has_acceleration_limits: True
-      linear.x.has_jerk_limits: False
       linear.x.max_velocity: 2.0
       linear.x.min_velocity: -2.0
       linear.x.max_acceleration: 2.0
       linear.x.max_deceleration: -4.0
       linear.x.max_acceleration_reverse: -2.0
       linear.x.max_deceleration_reverse: 4.0
-      linear.x.max_jerk: 0.0
-      linear.x.min_jerk: 0.0
-      angular.z.has_velocity_limits: True
-      angular.z.has_acceleration_limits: True
-      angular.z.has_jerk_limits: False
+      linear.x.max_jerk: nan
+      linear.x.min_jerk: nan
       angular.z.max_velocity: 2.0
       angular.z.min_velocity: -2.0
       angular.z.max_acceleration: 4.0
       angular.z.max_deceleration: -4.0
       angular.z.max_acceleration_reverse: -4.0
       angular.z.max_deceleration_reverse: 4.0
-      angular.z.max_jerk: 0.0
-      angular.z.min_jerk: 0.0
+      angular.z.max_jerk: nan
+      angular.z.min_jerk: nan
   lynx_control:
     ros__parameters:
       feedback_hz: 50
