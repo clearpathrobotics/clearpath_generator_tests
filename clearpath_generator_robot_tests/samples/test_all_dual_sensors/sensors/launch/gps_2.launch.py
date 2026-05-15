@@ -23,7 +23,7 @@ def generate_launch_description():
                 (
                     'parameters'
                     ,
-                    '/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_all_dual_sensors/sensors/config/gps_2.yaml'
+                    '/etc/clearpath/sensors/config/gps_2.yaml'
                 )
                 ,
                 (

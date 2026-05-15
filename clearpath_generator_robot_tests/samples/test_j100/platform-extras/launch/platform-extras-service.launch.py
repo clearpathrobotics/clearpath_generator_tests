@@ -23,7 +23,7 @@ def generate_launch_description():
                 (
                     'setup_path'
                     ,
-                    '/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_j100'
+                    '/etc/clearpath'
                 )
                 ,
                 (

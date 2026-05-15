@@ -23,7 +23,7 @@ def generate_launch_description():
                 (
                     'parameters'
                     ,
-                    '/home/tbaltovski/ptu/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_all_dual_sensors/sensors/config/ptu_0.yaml'
+                    '/etc/clearpath/sensors/config/ptu_0.yaml'
                 )
                 ,
                 (
