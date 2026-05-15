@@ -1,4 +1,4 @@
-# Bash setup generated at 2026-04-01 14:11:18.408418+00:00
+# Bash setup generated at 2026-05-15 00:45:22.224729+00:00
 # Additional bash configuration from robot.yaml
 export SPINNAKER_GENTL64_CTI="/opt/ros/jazzy/lib/spinnaker-gentl/Spinnaker_GenTL.cti"
 # Core ROS setup
