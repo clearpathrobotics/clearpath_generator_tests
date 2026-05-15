@@ -38,7 +38,8 @@ from clearpath_generator_base_tests.generator_tests import (
     BaseGeneratorSampleTest
 )
 from clearpath_generator_base_tests.utils import (
-    find_real_path_to_samples
+    find_real_path_to_samples,
+    normalize_sample_paths,
 )
 from clearpath_generator_gz_tests.sample_generator import (
     generate_test_samples
@@ -66,16 +67,18 @@ class TestGeneratorGzSamples(BaseGeneratorSampleTest):
     SHARE_DIR = get_package_share_directory('clearpath_generator_gz_tests')
     INSTALLED_SAMPLE_DIR = find_real_path_to_samples(os.path.join(SHARE_DIR, 'samples'))
 
-    def test_generate_samples(self):
+    def test_generate_samples(self) -> None:
         """Validate Gazebo sample generation."""
         generate_test_samples(self.NEW_SAMPLE_DIR)
+        normalize_sample_paths(self.NEW_SAMPLE_DIR)
+        return
 
-    def test_number_of_samples_match(self):
+    def test_number_of_samples_match(self) -> None:
         """Validate number of generated samples match installed."""
         super().test_number_of_samples_match()
         return
 
-    def test_samples_match(self):
+    def test_samples_match(self) -> None:
         """Validate contents of generated sample directory match."""
         super().test_samples_match()
         return
