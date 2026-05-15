@@ -54,9 +54,39 @@ def generate_launch_description():
         launch_arguments=
             [
                 (
-                    'setup_path'
+                    'robot_urdf'
                     ,
-                    '/etc/clearpath'
+                    '/etc/clearpath/robot.urdf.xacro'
+                )
+                ,
+                (
+                    'config_control'
+                    ,
+                    '/etc/clearpath/platform/config/control.yaml'
+                )
+                ,
+                (
+                    'config_localization'
+                    ,
+                    '/etc/clearpath/platform/config/localization.yaml'
+                )
+                ,
+                (
+                    'config_twist_mux'
+                    ,
+                    '/etc/clearpath/platform/config/twist_mux.yaml'
+                )
+                ,
+                (
+                    'config_interactive_markers'
+                    ,
+                    '/etc/clearpath/platform/config/teleop_interactive_markers.yaml'
+                )
+                ,
+                (
+                    'config_teleop_joy'
+                    ,
+                    '/etc/clearpath/platform/config/teleop_joy.yaml'
                 )
                 ,
                 (
