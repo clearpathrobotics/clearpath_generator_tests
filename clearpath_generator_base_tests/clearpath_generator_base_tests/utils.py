@@ -29,6 +29,7 @@
 # Redistribution and use in source and binary forms, with or without
 # modification, is not permitted without the express permission
 # of Clearpath Robotics.
+import argparse
 import difflib
 import filecmp
 import os
@@ -37,6 +38,9 @@ from typing import List
 from collections.abc import Callable
 
 from ament_index_python.packages import get_package_share_directory
+
+
+DEFAULT_SETUP_PATH = '/etc/clearpath'
 
 
 class MissingSampleException(Exception):
@@ -160,3 +164,81 @@ def get_test_samples():
             continue
         samples.append(sample)
     return samples
+
+
+
+def normalize_sample_paths(root_dir: str, target_path: str = DEFAULT_SETUP_PATH) -> None:
+    """Replace all occurrences of sample directory paths with the target path.
+
+    Walks each sample subdirectory in root_dir and replaces all occurrences
+    of that sample's absolute path with target_path in every text file.
+    The robot.yaml file is excluded as it is a source input, not generated output.
+    """
+    target_path = target_path.rstrip('/')
+    for sample_name in os.listdir(root_dir):
+        sample_dir = os.path.join(root_dir, sample_name)
+        if not os.path.isdir(sample_dir):
+            continue
+        sample_dir_abs = os.path.abspath(sample_dir)
+        # Replace with trailing slash first, then without
+        replacements = [
+            (sample_dir_abs + '/', target_path + '/'),
+            (sample_dir_abs, target_path),
+        ]
+        for dirpath, _, filenames in os.walk(sample_dir):
+            for filename in filenames:
+                if filename == 'robot.yaml':
+                    continue
+                filepath = os.path.join(dirpath, filename)
+                try:
+                    with open(filepath, 'r') as f:
+                        content = f.read()
+                except (UnicodeDecodeError, PermissionError):
+                    continue
+                original = content
+                for old, new in replacements:
+                    content = content.replace(old, new)
+                if content != original:
+                    with open(filepath, 'w') as f:
+                        f.write(content)
+
+
+def generate_samples_main(
+        prog: str,
+        description: str,
+        generate_fn: Callable[[str], None],
+        default_out: str = None) -> None:
+    """Shared entry point for all generate_samples scripts.
+
+    Handles argument parsing, invokes the generator function, and optionally
+    normalizes paths in the generated output.
+
+    :param prog: Program name for argparse.
+    :param description: Description for argparse.
+    :param generate_fn: Function that generates samples given a root directory.
+    :param default_out: Default output directory. If None, current working directory is used.
+    """
+    parser = argparse.ArgumentParser(prog=prog, description=description)
+    parser.add_argument(
+        '--out',
+        help='Output directory of generated files.',
+        default=default_out if default_out else os.getcwd(),
+        required=False)
+    parser.add_argument(
+        '--no-normalize',
+        action='store_true',
+        default=False,
+        help='Skip post-generation path normalization. '
+             'By default, absolute paths in generated files are replaced '
+             f'with {DEFAULT_SETUP_PATH}.')
+    args = parser.parse_args()
+
+    root_dir = os.path.abspath(args.out)
+    assert os.path.isdir(root_dir), f'Output directory "{root_dir}" does not exist.'
+
+    generate_fn(root_dir)
+
+    if not args.no_normalize:
+        print('Normalizing paths in generated files...')
+        normalize_sample_paths(root_dir)
+        print('Done.')

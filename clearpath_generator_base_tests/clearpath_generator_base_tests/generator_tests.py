@@ -74,25 +74,9 @@ class BaseGeneratorSampleTest:
     # Test samples
     TEST_SAMPLES = get_test_samples()
 
-    def filter_lines(self, lines: List[str], filepath: str) -> str:
+    def filter_lines(self, lines: List[str], filepath: str) -> List[str]:
         """Filter file lines to prevent comparing lines that are expected to be different."""
-        filtered = []
-
-        relpath_new_sample_dir = os.sep.join(
-            os.path.normpath(
-                self.NEW_SAMPLE_DIR).split(os.sep)[-2:])
-
-        relpath_installed_sample_dir = os.sep.join(
-            os.path.normpath(
-                self.INSTALLED_SAMPLE_DIR).split(os.sep)[-2:])
-
-        # Remove relative path
-        for line in lines:
-            if (relpath_new_sample_dir in line) or (
-                    relpath_installed_sample_dir in line):
-                continue
-            filtered.append(line)
-        return filtered
+        return lines
 
     def test_number_of_samples_match(self):
         """Validate number of samples matches."""

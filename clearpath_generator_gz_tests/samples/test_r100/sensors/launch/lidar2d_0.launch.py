@@ -27,7 +27,7 @@ def generate_launch_description():
                 {
                     'use_sim_time': True
                     ,
-                    'config_file': '/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_r100/sensors/config/lidar2d_0.yaml'
+                    'config_file': '/etc/clearpath/sensors/config/lidar2d_0.yaml'
                     ,
                 }
                 ,

@@ -27,7 +27,7 @@ def generate_launch_description():
                 {
                     'use_sim_time': True
                     ,
-                    'config_file': '/home/tbaltovski/ptu/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_all_dual_sensors/sensors/config/ptu_1.yaml'
+                    'config_file': '/etc/clearpath/sensors/config/ptu_1.yaml'
                     ,
                 }
                 ,
