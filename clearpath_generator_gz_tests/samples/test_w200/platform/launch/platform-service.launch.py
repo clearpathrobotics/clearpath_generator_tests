@@ -10,7 +10,7 @@ def generate_launch_description():
 
     launch_arg_imu_filter = DeclareLaunchArgument(
         'imu_filter',
-        default_value='/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_w200/platform/config/imu_filter.yaml',
+        default_value='/etc/clearpath/platform/config/imu_filter.yaml',
         description='')
 
     imu_filter = LaunchConfiguration('imu_filter')
@@ -30,7 +30,7 @@ def generate_launch_description():
                 (
                     'setup_path'
                     ,
-                    '/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_w200'
+                    '/etc/clearpath'
                 )
                 ,
                 (
@@ -146,7 +146,7 @@ def generate_launch_description():
                 {
                     'use_sim_time': True
                     ,
-                    'config_file': '/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_w200/sensors/config/imu_0.yaml'
+                    'config_file': '/etc/clearpath/sensors/config/imu_0.yaml'
                     ,
                 }
                 ,

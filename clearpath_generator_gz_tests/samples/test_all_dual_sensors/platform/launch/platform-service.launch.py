@@ -23,7 +23,7 @@ def generate_launch_description():
                 (
                     'setup_path'
                     ,
-                    '/home/lcamero/Workspaces/sample_ws/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_all_dual_sensors'
+                    '/etc/clearpath'
                 )
                 ,
                 (
