@@ -74,6 +74,14 @@ class BaseGeneratorSampleTest:
     # Test samples
     TEST_SAMPLES = get_test_samples()
 
+    def __init_subclass__(cls, **kwargs):
+        """Initialize subclass with generator-specific sample directory."""
+        super().__init_subclass__(**kwargs)
+        cls.NEW_SAMPLE_DIR = os.path.join(
+            BaseGeneratorSampleTest.NEW_SAMPLE_DIR, cls.GENERATOR_NAME
+        )
+        ensure_sample_dir_exists(cls.NEW_SAMPLE_DIR)
+
     def filter_lines(self, lines: List[str], filepath: str) -> List[str]:
         """Filter file lines to prevent comparing lines that are expected to be different."""
         return lines
