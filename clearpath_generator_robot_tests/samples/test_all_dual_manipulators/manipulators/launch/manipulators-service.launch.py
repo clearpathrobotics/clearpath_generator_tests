@@ -21,9 +21,27 @@ def generate_launch_description():
         launch_arguments=
             [
                 (
-                    'setup_path'
+                    'robot_urdf'
                     ,
-                    '/etc/clearpath'
+                    '/etc/clearpath/robot.urdf.xacro'
+                )
+                ,
+                (
+                    'config_control'
+                    ,
+                    '/etc/clearpath/manipulators/config/control.yaml'
+                )
+                ,
+                (
+                    'robot_srdf'
+                    ,
+                    '/etc/clearpath/robot.srdf'
+                )
+                ,
+                (
+                    'config_moveit'
+                    ,
+                    '/etc/clearpath/manipulators/config/moveit.yaml'
                 )
                 ,
                 (
@@ -45,7 +63,7 @@ def generate_launch_description():
                 )
                 ,
                 (
-                    'delay_moveit'
+                    'moveit_delay'
                     ,
                     '5.0'
                 )
