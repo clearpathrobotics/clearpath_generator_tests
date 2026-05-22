@@ -30,13 +30,13 @@
 # modification, is not permitted without the express permission
 # of Clearpath Robotics.
 import argparse
+from collections import Counter
+from collections.abc import Callable
 import difflib
 import filecmp
 import os
-
-from collections import Counter
-from collections.abc import Callable
 from typing import List
+
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -195,9 +195,9 @@ def get_test_samples():
     return samples
 
 
-
 def normalize_sample_paths(root_dir: str, target_path: str = DEFAULT_SETUP_PATH) -> None:
-    """Replace all occurrences of sample directory paths with the target path.
+    """
+    Replace all occurrences of sample directory paths with the target path.
 
     Walks each sample subdirectory in root_dir and replaces all occurrences
     of that sample's absolute path with target_path in every text file.
@@ -237,7 +237,8 @@ def generate_samples_main(
         description: str,
         generate_fn: Callable[[str], None],
         default_out: str = None) -> None:
-    """Shared entry point for all generate_samples scripts.
+    """
+    Shared entry point for all generate_samples scripts.
 
     Handles argument parsing, invokes the generator function, and optionally
     normalizes paths in the generated output.

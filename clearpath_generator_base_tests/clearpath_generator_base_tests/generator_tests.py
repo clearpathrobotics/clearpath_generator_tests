@@ -40,8 +40,8 @@ from typing import List
 from ament_index_python.packages import get_package_share_directory
 
 from clearpath_generator_base_tests.utils import (
-    ensure_sample_dir_exists,
     diff_dir_trees,
+    ensure_sample_dir_exists,
     get_test_samples,
     MismatchSampleException,
     MissingSampleException,
