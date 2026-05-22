@@ -32,22 +32,22 @@ def generate_launch_description():
     # Include Packages
     pkg_clearpath_common = FindPackageShare('clearpath_common')
     pkg_clearpath_diagnostics = FindPackageShare('clearpath_diagnostics')
-    pkg_clearpath_ros2_socketcan_interface = FindPackageShare('clearpath_ros2_socketcan_interface')
     pkg_canopen_inventus_bringup = FindPackageShare('canopen_inventus_bringup')
+    pkg_clearpath_ros2_socketcan_interface = FindPackageShare('clearpath_ros2_socketcan_interface')
 
     # Declare launch files
     launch_file_platform = PathJoinSubstitution([
         pkg_clearpath_common, 'launch', 'platform.launch.py'])
     launch_file_diagnostics = PathJoinSubstitution([
         pkg_clearpath_diagnostics, 'launch', 'diagnostics.launch.py'])
+    launch_file_canopen_inventus = PathJoinSubstitution([
+        pkg_canopen_inventus_bringup, 'launch', 'inventus.launch.py'])
     launch_file_foxglove_bridge = PathJoinSubstitution([
         pkg_clearpath_diagnostics, 'launch', 'foxglove_bridge.launch.py'])
     launch_file_vcan0_receiver = PathJoinSubstitution([
         pkg_clearpath_ros2_socketcan_interface, 'launch', 'receiver.launch.py'])
     launch_file_vcan0_sender = PathJoinSubstitution([
         pkg_clearpath_ros2_socketcan_interface, 'launch', 'sender.launch.py'])
-    launch_file_canopen_inventus = PathJoinSubstitution([
-        pkg_canopen_inventus_bringup, 'launch', 'inventus.launch.py'])
 
     # Include launch files
     launch_platform = IncludeLaunchDescription(
@@ -131,6 +131,73 @@ def generate_launch_description():
                     'aggregator_parameters'
                     ,
                     diagnostic_aggregator_params
+                )
+                ,
+            ]
+    )
+
+    launch_canopen_inventus = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_canopen_inventus]),
+        launch_arguments=
+            [
+                (
+                    'namespace'
+                    ,
+                    'a300_00000/platform/bms'
+                )
+                ,
+                (
+                    'interface'
+                    ,
+                    'vcan1'
+                )
+                ,
+                (
+                    'battery_count'
+                    ,
+                    '2'
+                )
+                ,
+                (
+                    'master_id'
+                    ,
+                    '49'
+                )
+                ,
+                (
+                    'battery_0_id'
+                    ,
+                    '49'
+                )
+                ,
+                (
+                    'battery_1_id'
+                    ,
+                    '50'
+                )
+                ,
+                (
+                    'battery_2_id'
+                    ,
+                    '51'
+                )
+                ,
+                (
+                    'battery_3_id'
+                    ,
+                    '52'
+                )
+                ,
+                (
+                    'battery_4_id'
+                    ,
+                    '53'
+                )
+                ,
+                (
+                    'battery_5_id'
+                    ,
+                    '54'
                 )
                 ,
             ]
@@ -284,73 +351,6 @@ def generate_launch_description():
                     'transition_attempts'
                     ,
                     '3'
-                )
-                ,
-            ]
-    )
-
-    launch_canopen_inventus = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([launch_file_canopen_inventus]),
-        launch_arguments=
-            [
-                (
-                    'namespace'
-                    ,
-                    'a300_00000/platform/bms'
-                )
-                ,
-                (
-                    'interface'
-                    ,
-                    'vcan1'
-                )
-                ,
-                (
-                    'battery_count'
-                    ,
-                    '2'
-                )
-                ,
-                (
-                    'master_id'
-                    ,
-                    '49'
-                )
-                ,
-                (
-                    'battery_0_id'
-                    ,
-                    '49'
-                )
-                ,
-                (
-                    'battery_1_id'
-                    ,
-                    '50'
-                )
-                ,
-                (
-                    'battery_2_id'
-                    ,
-                    '51'
-                )
-                ,
-                (
-                    'battery_3_id'
-                    ,
-                    '52'
-                )
-                ,
-                (
-                    'battery_4_id'
-                    ,
-                    '53'
-                )
-                ,
-                (
-                    'battery_5_id'
-                    ,
-                    '54'
                 )
                 ,
             ]
@@ -551,10 +551,10 @@ def generate_launch_description():
     ld.add_action(launch_arg_foxglove_bridge_parameters)
     ld.add_action(launch_platform)
     ld.add_action(launch_diagnostics)
+    ld.add_action(launch_canopen_inventus)
     ld.add_action(launch_foxglove_bridge)
     ld.add_action(launch_vcan0_receiver)
     ld.add_action(launch_vcan0_sender)
-    ld.add_action(launch_canopen_inventus)
     ld.add_action(node_micro_ros_agent)
     ld.add_action(node_battery_state_control)
     ld.add_action(node_wireless_watcher)
