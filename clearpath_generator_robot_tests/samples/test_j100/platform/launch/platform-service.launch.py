@@ -195,11 +195,18 @@ def generate_launch_description():
         package='clearpath_hardware_interfaces',
         namespace='j100_0000',
         output='screen',
-        arguments=
+        parameters=
             [
-                '-s'
+                PathJoinSubstitution([FindPackageShare('clearpath_hardware_interfaces'), 'config', 'battery_state_estimator', 'he2613.yaml'])
                 ,
-                '/etc/clearpath'
+                {
+                    'platform': 'j100'
+                    ,
+                    'cell.num_series': 1
+                    ,
+                    'cell.num_parallel': 1
+                    ,
+                }
                 ,
             ]
         ,

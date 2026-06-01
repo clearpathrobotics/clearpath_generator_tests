@@ -334,11 +334,18 @@ def generate_launch_description():
         package='clearpath_hardware_interfaces',
         namespace='do150_0000',
         output='screen',
-        arguments=
+        parameters=
             [
-                '-s'
+                PathJoinSubstitution([FindPackageShare('clearpath_hardware_interfaces'), 'config', 'battery_state_estimator', 'tlv1222.yaml'])
                 ,
-                '/etc/clearpath'
+                {
+                    'platform': 'dd150'
+                    ,
+                    'cell.num_series': 1
+                    ,
+                    'cell.num_parallel': 1
+                    ,
+                }
                 ,
             ]
         ,
