@@ -4,8 +4,8 @@ do100_0000:
       serial_number: 'do100-0000'
       platform_model: 'do100'
       ros_distro: 'jazzy'
-      latest_apt_firmware_version: '3.0.3'
-      installed_apt_firmware_version: '3.0.3'
+      latest_apt_firmware_version: '3.0.4'
+      installed_apt_firmware_version: '3.0.4'
       bms_state_rate: 10.0
       bms_state_tolerance: 0.15
       mcu_protocol: 'uros'
