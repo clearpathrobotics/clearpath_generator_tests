@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: clearpathrobotics/repos-dep-update-action
-          ref: 0.0.4
+          ref: 0.0.5
           path: repos-dep-update-action
       - name: "[Repositories Updater] Install dependencies"
         run: |
@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: clearpathrobotics/repos-dep-update-action
-          ref: 0.0.4
+          ref: 0.0.5
           path: repos-dep-update-action
       - name: "[Repositories Updater] Install dependencies"
         run: |

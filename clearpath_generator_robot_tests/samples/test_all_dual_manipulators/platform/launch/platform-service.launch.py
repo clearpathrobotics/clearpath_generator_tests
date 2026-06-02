@@ -77,54 +77,7 @@ def generate_launch_description():
             ]
     )
 
-    # Nodes
-    node_micro_ros_agent = Node(
-        name='micro_ros_agent',
-        executable='micro_ros_agent',
-        package='micro_ros_agent',
-        namespace='cpr_generic_e',
-        output='screen',
-        arguments=
-            [
-                'udp4'
-                ,
-                '--port'
-                ,
-                '11411'
-                ,
-            ]
-        ,
-    )
-
-    # Processes
-    process_configure_mcu = ExecuteProcess(
-        shell=True,
-        cmd=
-            [
-                [
-                    'export ROS_DOMAIN_ID=0;'
-                    ,
-                ]
-                ,
-                [
-                    FindExecutable(name='ros2')
-                    ,
-                    ' service call platform/mcu/configure'
-                    ,
-                    ' clearpath_platform_msgs/srv/ConfigureMcu'
-                    ,
-                    ' "{domain_id: 0,'
-                    ,
-                    ' robot_namespace: \'cpr_generic_e\'}"'
-                    ,
-                ]
-                ,
-            ]
-    )
-
     # Create LaunchDescription
     ld = LaunchDescription()
     ld.add_action(launch_platform)
-    ld.add_action(node_micro_ros_agent)
-    ld.add_action(process_configure_mcu)
     return ld

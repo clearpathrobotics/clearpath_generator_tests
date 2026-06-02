@@ -30,12 +30,13 @@
 # modification, is not permitted without the express permission
 # of Clearpath Robotics.
 import argparse
+from collections import Counter
+from collections.abc import Callable
 import difflib
 import filecmp
 import os
-
 from typing import List
-from collections.abc import Callable
+
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -61,13 +62,35 @@ class MismatchSampleException(Exception):
         self.errors = errors
 
 
+def _line_multiset(lines: List[str]) -> Counter:
+    """
+    Return a multiset of non-blank, stripped lines from `lines`.
+
+    Blank / whitespace-only lines are ignored so that whitespace-only
+    differences (e.g. blocks that became adjacent after a reorder, gaining
+    or losing a separating blank line) do not register as content
+    differences for the reorder-only check.
+    """
+    return Counter(stripped for stripped in (ln.strip() for ln in lines) if stripped)
+
+
 def diff_dir_trees(
         dir_1: str,
         dir_2: str,
         shallow: bool = False,
-        line_filter: Callable = None
+        line_filter: Callable = None,
+        reorder_only_ok: bool = False,
         ) -> tuple[List]:
-    """Compare the two directory trees and return a list of differences."""
+    """
+    Compare the two directory trees and return a list of differences.
+
+    When `reorder_only_ok` is True, a mismatched file pair whose non-blank,
+    stripped lines form the same multiset is treated as a match (i.e.
+    neither `logs` nor `summary_logs` gains an entry for it). This is
+    intended for cases where the generator may legitimately emit the same
+    set of launch actions in a different order — functionally
+    equivalent for ROS 2 launch but textually divergent.
+    """
     logs = []
     summary_logs = []
     # Compare Directories
@@ -104,6 +127,11 @@ def diff_dir_trees(
         if line_filter:
             lines_1 = line_filter(lines_1, path_1)
             lines_2 = line_filter(lines_2, path_2)
+        # Fast path: if reorder-only is acceptable and the two files contain
+        # the same multiset of non-blank lines, treat as a match and skip
+        # the O(n^2) unified diff entirely.
+        if reorder_only_ok and _line_multiset(lines_1) == _line_multiset(lines_2):
+            continue
         file_diff = difflib.unified_diff(
             a=lines_1,
             b=lines_2,
@@ -131,6 +159,7 @@ def diff_dir_trees(
                 dir_2=os.path.join(dir_2, common_dir),
                 shallow=shallow,
                 line_filter=line_filter,
+                reorder_only_ok=reorder_only_ok,
             )
             logs.extend(sub_logs)
             summary_logs.extend(sub_summary_logs)
@@ -166,9 +195,9 @@ def get_test_samples():
     return samples
 
 
-
 def normalize_sample_paths(root_dir: str, target_path: str = DEFAULT_SETUP_PATH) -> None:
-    """Replace all occurrences of sample directory paths with the target path.
+    """
+    Replace all occurrences of sample directory paths with the target path.
 
     Walks each sample subdirectory in root_dir and replaces all occurrences
     of that sample's absolute path with target_path in every text file.
@@ -208,7 +237,8 @@ def generate_samples_main(
         description: str,
         generate_fn: Callable[[str], None],
         default_out: str = None) -> None:
-    """Shared entry point for all generate_samples scripts.
+    """
+    Shared entry point for all generate_samples scripts.
 
     Handles argument parsing, invokes the generator function, and optionally
     normalizes paths in the generated output.
