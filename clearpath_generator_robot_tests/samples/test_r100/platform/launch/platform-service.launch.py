@@ -334,11 +334,18 @@ def generate_launch_description():
         package='clearpath_hardware_interfaces',
         namespace='r100_0000',
         output='screen',
-        arguments=
+        parameters=
             [
-                '-s'
+                PathJoinSubstitution([FindPackageShare('clearpath_hardware_interfaces'), 'config', 'battery_state_estimator', 'dtm8a31.yaml'])
                 ,
-                '/etc/clearpath'
+                {
+                    'platform': 'r100'
+                    ,
+                    'cell.num_series': 1
+                    ,
+                    'cell.num_parallel': 2
+                    ,
+                }
                 ,
             ]
         ,

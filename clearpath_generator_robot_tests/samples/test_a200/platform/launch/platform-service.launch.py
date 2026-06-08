@@ -170,11 +170,18 @@ def generate_launch_description():
         package='clearpath_hardware_interfaces',
         namespace='a200_0000',
         output='screen',
-        arguments=
+        parameters=
             [
-                '-s'
+                PathJoinSubstitution([FindPackageShare('clearpath_hardware_interfaces'), 'config', 'battery_state_estimator', 'es20_12c.yaml'])
                 ,
-                '/etc/clearpath'
+                {
+                    'platform': 'a200'
+                    ,
+                    'cell.num_series': 2
+                    ,
+                    'cell.num_parallel': 1
+                    ,
+                }
                 ,
             ]
         ,
