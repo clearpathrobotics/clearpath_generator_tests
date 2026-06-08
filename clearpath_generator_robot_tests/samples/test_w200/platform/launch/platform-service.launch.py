@@ -195,11 +195,18 @@ def generate_launch_description():
         package='clearpath_hardware_interfaces',
         namespace='w200_0000',
         output='screen',
-        arguments=
+        parameters=
             [
-                '-s'
+                PathJoinSubstitution([FindPackageShare('clearpath_hardware_interfaces'), 'config', 'battery_state_estimator', 'u1_35.yaml'])
                 ,
-                '/etc/clearpath'
+                {
+                    'platform': 'w200'
+                    ,
+                    'cell.num_series': 4
+                    ,
+                    'cell.num_parallel': 3
+                    ,
+                }
                 ,
             ]
         ,
