@@ -20,4 +20,7 @@ w200_0000:
       locks.safety_stop.topic: 'platform/safety_stop'
       locks.safety_stop.timeout: 0.0
       locks.safety_stop.priority: 254
+      locks.bt_quality.topic: 'joy_teleop/bt_quality_stop'
+      locks.bt_quality.timeout: 0.0
+      locks.bt_quality.priority: 253
       use_sim_time: True
