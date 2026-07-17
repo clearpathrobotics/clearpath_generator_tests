@@ -4,8 +4,8 @@ dd100_0000:
       serial_number: 'dd100-0000'
       platform_model: 'dd100'
       ros_distro: 'jazzy'
-      latest_apt_firmware_version: '3.0.3'
-      installed_apt_firmware_version: '3.0.3'
+      latest_apt_firmware_version: '3.0.5'
+      installed_apt_firmware_version: '3.0.5'
       bms_state_rate: 10.0
       bms_state_tolerance: 0.15
       mcu_protocol: 'uros'
