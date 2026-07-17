@@ -11,9 +11,9 @@ jobs:
     container:
       image: ghcr.io/clearpathrobotics/clearpath_docker:jazzy-ci-robot-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - name: "[Repositories Updater] Checkout action"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           repository: clearpathrobotics/repos-dep-update-action
           ref: 0.0.4
