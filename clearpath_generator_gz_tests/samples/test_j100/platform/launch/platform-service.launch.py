@@ -154,8 +154,8 @@ def generate_launch_description():
         ,
     )
 
-    node_imu_filter_node = Node(
-        name='imu_filter_node',
+    node_imu_filter_madgwick = Node(
+        name='imu_filter_madgwick',
         executable='imu_filter_madgwick_node',
         package='imu_filter_madgwick',
         namespace='j100_0000',
@@ -222,6 +222,6 @@ def generate_launch_description():
     ld.add_action(node_cmd_vel_bridge)
     ld.add_action(node_odom_base_tf_bridge)
     ld.add_action(node_imu_0_gz_bridge)
-    ld.add_action(node_imu_filter_node)
+    ld.add_action(node_imu_filter_madgwick)
     ld.add_action(node_gps_0_gz_bridge)
     return ld
