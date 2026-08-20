@@ -26,6 +26,8 @@
     <disable_collisions link1="camera_0_base_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_0_base_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_0_base_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_0_base_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_0_base_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_0_base_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_0_base_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_0_base_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -64,6 +66,8 @@
     <disable_collisions link1="camera_1_base_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_1_base_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_1_base_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_1_base_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_1_base_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_1_base_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_1_base_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_1_base_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -101,6 +105,8 @@
     <disable_collisions link1="camera_2_lens" link2="ins_1_base_link" reason="Never"/>
     <disable_collisions link1="camera_2_lens" link2="ins_1_gps_0_link" reason="Never"/>
     <disable_collisions link1="camera_2_lens" link2="ins_1_gps_1_link" reason="Never"/>
+    <disable_collisions link1="camera_2_lens" link2="lidar2d_0_link" reason="Never"/>
+    <disable_collisions link1="camera_2_lens" link2="lidar2d_1_link" reason="Never"/>
     <disable_collisions link1="camera_2_lens" link2="lidar2d_2_link" reason="Never"/>
     <disable_collisions link1="camera_2_lens" link2="lidar2d_3_link" reason="Never"/>
     <disable_collisions link1="camera_2_lens" link2="lidar3d_0_base_link" reason="Never"/>
@@ -137,6 +143,8 @@
     <disable_collisions link1="camera_2_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_2_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_2_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_2_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_2_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_2_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_2_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_2_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -172,6 +180,8 @@
     <disable_collisions link1="camera_3_lens" link2="ins_1_base_link" reason="Never"/>
     <disable_collisions link1="camera_3_lens" link2="ins_1_gps_0_link" reason="Never"/>
     <disable_collisions link1="camera_3_lens" link2="ins_1_gps_1_link" reason="Never"/>
+    <disable_collisions link1="camera_3_lens" link2="lidar2d_0_link" reason="Never"/>
+    <disable_collisions link1="camera_3_lens" link2="lidar2d_1_link" reason="Never"/>
     <disable_collisions link1="camera_3_lens" link2="lidar2d_2_link" reason="Never"/>
     <disable_collisions link1="camera_3_lens" link2="lidar2d_3_link" reason="Never"/>
     <disable_collisions link1="camera_3_lens" link2="lidar3d_0_base_link" reason="Never"/>
@@ -206,6 +216,8 @@
     <disable_collisions link1="camera_3_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_3_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_3_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_3_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_3_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_3_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_3_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_3_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -239,6 +251,8 @@
     <disable_collisions link1="camera_4_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_4_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_4_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_4_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_4_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_4_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_4_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_4_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -271,6 +285,8 @@
     <disable_collisions link1="camera_5_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_5_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_5_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_5_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_5_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_5_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_5_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_5_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -302,6 +318,8 @@
     <disable_collisions link1="camera_6_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_6_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_6_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_6_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_6_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_6_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_6_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_6_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -332,6 +350,8 @@
     <disable_collisions link1="camera_7_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="camera_7_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="camera_7_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_7_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="camera_7_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="camera_7_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="camera_7_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="camera_7_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -361,6 +381,8 @@
     <disable_collisions link1="gps_0_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="gps_0_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="gps_0_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_0_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_0_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="gps_0_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="gps_0_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="gps_0_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -389,6 +411,8 @@
     <disable_collisions link1="gps_1_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="gps_1_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="gps_1_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_1_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_1_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="gps_1_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="gps_1_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="gps_1_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -416,6 +440,8 @@
     <disable_collisions link1="gps_5_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="gps_5_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="gps_5_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_5_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_5_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="gps_5_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="gps_5_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="gps_5_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -442,6 +468,8 @@
     <disable_collisions link1="gps_6_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="gps_6_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="gps_6_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_6_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_6_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="gps_6_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="gps_6_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="gps_6_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -467,6 +495,8 @@
     <disable_collisions link1="gps_7_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="gps_7_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="gps_7_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_7_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_7_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="gps_7_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="gps_7_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="gps_7_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -491,6 +521,8 @@
     <disable_collisions link1="gps_8_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="gps_8_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="gps_8_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_8_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="gps_8_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="gps_8_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="gps_8_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="gps_8_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -514,6 +546,8 @@
     <disable_collisions link1="ins_0_base_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_base_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_base_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_0_base_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_0_base_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_base_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_base_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_base_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -536,6 +570,8 @@
     <disable_collisions link1="ins_0_gps_0_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_0_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_0_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_0_gps_0_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_0_gps_0_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_0_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_0_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_0_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -557,6 +593,8 @@
     <disable_collisions link1="ins_0_gps_1_link" link2="ins_1_base_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_1_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_1_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_0_gps_1_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_0_gps_1_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_1_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_1_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="ins_0_gps_1_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -577,6 +615,8 @@
     <disable_collisions link1="ins_0_gps_1_link" link2="ptu_1_tilted_link" reason="Never"/>
     <disable_collisions link1="ins_1_base_link" link2="ins_1_gps_0_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_base_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_1_base_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_1_base_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_base_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_base_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_base_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -596,6 +636,8 @@
     <disable_collisions link1="ins_1_base_link" link2="ptu_1_tilt_link" reason="Never"/>
     <disable_collisions link1="ins_1_base_link" link2="ptu_1_tilted_link" reason="Never"/>
     <disable_collisions link1="ins_1_gps_0_link" link2="ins_1_gps_1_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_1_gps_0_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_1_gps_0_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_0_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_0_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_0_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -614,6 +656,8 @@
     <disable_collisions link1="ins_1_gps_0_link" link2="ptu_1_pan_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_0_link" link2="ptu_1_tilt_link" reason="Never"/>
     <disable_collisions link1="ins_1_gps_0_link" link2="ptu_1_tilted_link" reason="Never"/>
+    <disable_collisions link1="ins_1_gps_1_link" link2="lidar2d_0_link" reason="Adjacent"/>
+    <disable_collisions link1="ins_1_gps_1_link" link2="lidar2d_1_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_1_link" link2="lidar2d_2_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_1_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_1_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
@@ -632,6 +676,43 @@
     <disable_collisions link1="ins_1_gps_1_link" link2="ptu_1_pan_link" reason="Adjacent"/>
     <disable_collisions link1="ins_1_gps_1_link" link2="ptu_1_tilt_link" reason="Never"/>
     <disable_collisions link1="ins_1_gps_1_link" link2="ptu_1_tilted_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar2d_1_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar2d_2_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar2d_3_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_0_cap_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_0_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_1_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_1_cap_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_1_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_2_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_3_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_4_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="lidar3d_5_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="ptu_0_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="ptu_0_pan_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="ptu_0_tilt_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="ptu_1_pan_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_0_link" link2="ptu_1_tilt_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_0_link" link2="ptu_1_tilted_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar2d_2_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar2d_3_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_0_cap_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_0_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_1_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_1_cap_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_1_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_2_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_3_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_4_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="lidar3d_5_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="ptu_0_base_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="ptu_0_pan_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="ptu_0_tilt_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="ptu_1_pan_link" reason="Adjacent"/>
+    <disable_collisions link1="lidar2d_1_link" link2="ptu_1_tilt_link" reason="Never"/>
+    <disable_collisions link1="lidar2d_1_link" link2="ptu_1_tilted_link" reason="Never"/>
     <disable_collisions link1="lidar2d_2_link" link2="lidar2d_3_link" reason="Adjacent"/>
     <disable_collisions link1="lidar2d_2_link" link2="lidar3d_0_base_link" reason="Adjacent"/>
     <disable_collisions link1="lidar2d_2_link" link2="lidar3d_0_cap_link" reason="Never"/>
