@@ -17,8 +17,10 @@ def generate_launch_description():
     launch_file_lidar2d_3 = '/etc/clearpath/sensors/launch/lidar2d_3.launch.py'
     launch_file_lidar3d_0 = '/etc/clearpath/sensors/launch/lidar3d_0.launch.py'
     launch_file_lidar3d_1 = '/etc/clearpath/sensors/launch/lidar3d_1.launch.py'
-    launch_file_lidar3d_4 = '/etc/clearpath/sensors/launch/lidar3d_4.launch.py'
-    launch_file_lidar3d_5 = '/etc/clearpath/sensors/launch/lidar3d_5.launch.py'
+    launch_file_lidar3d_2 = '/etc/clearpath/sensors/launch/lidar3d_2.launch.py'
+    launch_file_lidar3d_3 = '/etc/clearpath/sensors/launch/lidar3d_3.launch.py'
+    launch_file_lidar3d_6 = '/etc/clearpath/sensors/launch/lidar3d_6.launch.py'
+    launch_file_lidar3d_7 = '/etc/clearpath/sensors/launch/lidar3d_7.launch.py'
     launch_file_camera_0 = '/etc/clearpath/sensors/launch/camera_0.launch.py'
     launch_file_camera_1 = '/etc/clearpath/sensors/launch/camera_1.launch.py'
     launch_file_camera_2 = '/etc/clearpath/sensors/launch/camera_2.launch.py'
@@ -74,12 +76,20 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([launch_file_lidar3d_1]),
     )
 
-    launch_lidar3d_4 = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([launch_file_lidar3d_4]),
+    launch_lidar3d_2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_lidar3d_2]),
     )
 
-    launch_lidar3d_5 = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([launch_file_lidar3d_5]),
+    launch_lidar3d_3 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_lidar3d_3]),
+    )
+
+    launch_lidar3d_6 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_lidar3d_6]),
+    )
+
+    launch_lidar3d_7 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_lidar3d_7]),
     )
 
     launch_camera_0 = IncludeLaunchDescription(
@@ -206,8 +216,10 @@ def generate_launch_description():
     ld.add_action(launch_lidar2d_3)
     ld.add_action(launch_lidar3d_0)
     ld.add_action(launch_lidar3d_1)
-    ld.add_action(launch_lidar3d_4)
-    ld.add_action(launch_lidar3d_5)
+    ld.add_action(launch_lidar3d_2)
+    ld.add_action(launch_lidar3d_3)
+    ld.add_action(launch_lidar3d_6)
+    ld.add_action(launch_lidar3d_7)
     ld.add_action(launch_camera_0)
     ld.add_action(launch_camera_1)
     ld.add_action(launch_camera_2)
