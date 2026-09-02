@@ -16,8 +16,8 @@ def generate_launch_description():
     prefix = LaunchConfiguration('prefix')
 
     # Nodes
-    node_lidar3d_5_gz_bridge = Node(
-        name='lidar3d_5_gz_bridge',
+    node_lidar3d_2_gz_bridge = Node(
+        name='lidar3d_2_gz_bridge',
         executable='parameter_bridge',
         package='ros_gz_bridge',
         namespace='cpr_generic_e/sensors/',
@@ -27,7 +27,7 @@ def generate_launch_description():
                 {
                     'use_sim_time': True
                     ,
-                    'config_file': '/etc/clearpath/sensors/config/lidar3d_5.yaml'
+                    'config_file': '/etc/clearpath/sensors/config/lidar3d_2.yaml'
                     ,
                 }
                 ,
@@ -35,8 +35,8 @@ def generate_launch_description():
         ,
     )
 
-    node_lidar3d_5_static_tf = Node(
-        name='lidar3d_5_static_tf',
+    node_lidar3d_2_static_tf = Node(
+        name='lidar3d_2_static_tf',
         executable='static_transform_publisher',
         package='tf2_ros',
         namespace='cpr_generic_e',
@@ -45,11 +45,11 @@ def generate_launch_description():
             [
                 '--frame-id'
                 ,
-                'lidar3d_5_link'
+                'lidar3d_2_link'
                 ,
                 '--child-frame-id'
                 ,
-                'cpr_generic_e/robot/base_link/lidar3d_5'
+                'cpr_generic_e/robot/base_link/lidar3d_2'
                 ,
             ]
         ,
@@ -83,6 +83,6 @@ def generate_launch_description():
     # Create LaunchDescription
     ld = LaunchDescription()
     ld.add_action(launch_arg_prefix)
-    ld.add_action(node_lidar3d_5_gz_bridge)
-    ld.add_action(node_lidar3d_5_static_tf)
+    ld.add_action(node_lidar3d_2_gz_bridge)
+    ld.add_action(node_lidar3d_2_static_tf)
     return ld

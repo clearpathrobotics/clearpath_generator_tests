@@ -12,24 +12,24 @@ def generate_launch_description():
     pkg_clearpath_sensors = FindPackageShare('clearpath_sensors')
 
     # Declare launch files
-    launch_file_hesai_lidar = PathJoinSubstitution([
-        pkg_clearpath_sensors, 'launch', 'hesai_lidar.launch.py'])
+    launch_file_velodyne_lidar = PathJoinSubstitution([
+        pkg_clearpath_sensors, 'launch', 'velodyne_lidar.launch.py'])
 
     # Include launch files
-    launch_hesai_lidar = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([launch_file_hesai_lidar]),
+    launch_velodyne_lidar = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_velodyne_lidar]),
         launch_arguments=
             [
                 (
                     'parameters'
                     ,
-                    '/etc/clearpath/sensors/config/lidar3d_1.yaml'
+                    '/etc/clearpath/sensors/config/lidar3d_7.yaml'
                 )
                 ,
                 (
                     'namespace'
                     ,
-                    'cpr_generic_e/sensors/lidar3d_1'
+                    'cpr_generic_e/sensors/lidar3d_7'
                 )
                 ,
                 (
@@ -43,5 +43,5 @@ def generate_launch_description():
 
     # Create LaunchDescription
     ld = LaunchDescription()
-    ld.add_action(launch_hesai_lidar)
+    ld.add_action(launch_velodyne_lidar)
     return ld

@@ -78,38 +78,50 @@
   </xacro:sick_lms1xx>
 
   <!-- lidar3d_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/hesai_lidar.urdf.xacro"/>
+  <xacro:hesai_lidar name="lidar3d_0" parent_link="lidar3d_row_link" ang_res_h="0.0015707963267948967" ang_res_v="0.017453292519943295" min_ang_h="0.0" max_ang_h="6.283185307179586" min_ang_v="-0.2792526803190927" max_ang_v="0.2617993877991494" min_range="0.05" max_range="120.0" update_rate="20">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:hesai_lidar>
+
+  <!-- lidar3d_1 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/hesai_lidar.urdf.xacro"/>
+  <xacro:hesai_lidar name="lidar3d_1" parent_link="lidar3d_row_link" ang_res_h="0.0015707963267948967" ang_res_v="0.017453292519943295" min_ang_h="0.0" max_ang_h="6.283185307179586" min_ang_v="-0.2792526803190927" max_ang_v="0.2617993877991494" min_range="0.05" max_range="120.0" update_rate="20">
+    <origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:hesai_lidar>
+
+  <!-- lidar3d_2 -->
   <xacro:include filename="$(find clearpath_sensors_description)/urdf/ouster_os1.urdf.xacro"/>
-  <xacro:ouster_os1 name="lidar3d_0" parent_link="lidar3d_row_link" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20" samples_h="1024" samples_v="64" base="base" cap="halo">
+  <xacro:ouster_os1 name="lidar3d_2" parent_link="lidar3d_row_link" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20" samples_h="1024" samples_v="64" base="base" cap="halo">
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
   </xacro:ouster_os1>
 
-  <!-- lidar3d_1 -->
+  <!-- lidar3d_3 -->
   <xacro:include filename="$(find clearpath_sensors_description)/urdf/ouster_os1.urdf.xacro"/>
-  <xacro:ouster_os1 name="lidar3d_1" parent_link="lidar3d_row_link" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20" samples_h="1024" samples_v="64" base="base" cap="halo">
+  <xacro:ouster_os1 name="lidar3d_3" parent_link="lidar3d_row_link" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20" samples_h="1024" samples_v="64" base="base" cap="halo">
     <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
   </xacro:ouster_os1>
 
-  <!-- lidar3d_2 -->
+  <!-- lidar3d_4 -->
   <xacro:include filename="$(find clearpath_sensors_description)/urdf/seyond_lidar.urdf.xacro"/>
-  <xacro:seyond_lidar name="lidar3d_2" parent_link="lidar3d_row_link" ang_res_h="0.01" ang_res_v="0.01" min_ang_h="-1.0471975511965976" max_ang_h="1.0471975511965976" min_ang_v="-0.6108652381980153" max_ang_v="0.6108652381980153" min_range="0.1" max_range="150.0" update_rate="20">
+  <xacro:seyond_lidar name="lidar3d_4" parent_link="lidar3d_row_link" ang_res_h="0.01" ang_res_v="0.01" min_ang_h="-1.0471975511965976" max_ang_h="1.0471975511965976" min_ang_v="-0.6108652381980153" max_ang_v="0.6108652381980153" min_range="0.1" max_range="150.0" update_rate="20">
     <origin xyz="0.25 0.0 0.0" rpy="0.0 0.0 0.0"/>
   </xacro:seyond_lidar>
 
-  <!-- lidar3d_3 -->
+  <!-- lidar3d_5 -->
   <xacro:include filename="$(find clearpath_sensors_description)/urdf/seyond_lidar.urdf.xacro"/>
-  <xacro:seyond_lidar name="lidar3d_3" parent_link="lidar3d_row_link" ang_res_h="0.01" ang_res_v="0.01" min_ang_h="-1.0471975511965976" max_ang_h="1.0471975511965976" min_ang_v="-0.6108652381980153" max_ang_v="0.6108652381980153" min_range="0.1" max_range="150.0" update_rate="20">
+  <xacro:seyond_lidar name="lidar3d_5" parent_link="lidar3d_row_link" ang_res_h="0.01" ang_res_v="0.01" min_ang_h="-1.0471975511965976" max_ang_h="1.0471975511965976" min_ang_v="-0.6108652381980153" max_ang_v="0.6108652381980153" min_range="0.1" max_range="150.0" update_rate="20">
     <origin xyz="0.25 0.0 0.25" rpy="0.0 0.0 0.0"/>
   </xacro:seyond_lidar>
 
-  <!-- lidar3d_4 -->
+  <!-- lidar3d_6 -->
   <xacro:include filename="$(find clearpath_sensors_description)/urdf/velodyne_lidar.urdf.xacro"/>
-  <xacro:velodyne_lidar name="lidar3d_4" parent_link="lidar3d_row_link" ang_res_h="0.4" ang_res_v="2.0" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20">
+  <xacro:velodyne_lidar name="lidar3d_6" parent_link="lidar3d_row_link" ang_res_h="0.4" ang_res_v="2.0" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20">
     <origin xyz="0.5 0.0 0.0" rpy="0.0 0.0 0.0"/>
   </xacro:velodyne_lidar>
 
-  <!-- lidar3d_5 -->
+  <!-- lidar3d_7 -->
   <xacro:include filename="$(find clearpath_sensors_description)/urdf/velodyne_lidar.urdf.xacro"/>
-  <xacro:velodyne_lidar name="lidar3d_5" parent_link="lidar3d_row_link" ang_res_h="0.4" ang_res_v="2.0" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20">
+  <xacro:velodyne_lidar name="lidar3d_7" parent_link="lidar3d_row_link" ang_res_h="0.4" ang_res_v="2.0" min_ang_h="-3.141592" max_ang_h="3.141592" min_ang_v="-0.261799" max_ang_v="0.261799" min_range="0.9" max_range="130.0" update_rate="20">
     <origin xyz="0.5 0.0 0.25" rpy="0.0 0.0 0.0"/>
   </xacro:velodyne_lidar>
 

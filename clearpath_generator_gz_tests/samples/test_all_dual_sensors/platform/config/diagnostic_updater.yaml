@@ -28,14 +28,22 @@ cpr_generic_e:
       topics.sensors/lidar3d_1/scan.rate: 20.0
       topics.sensors/lidar3d_1/points.type: 'sensor_msgs/msg/PointCloud2'
       topics.sensors/lidar3d_1/points.rate: 20.0
-      topics.sensors/lidar3d_4/scan.type: 'sensor_msgs/msg/LaserScan'
-      topics.sensors/lidar3d_4/scan.rate: 20.0
-      topics.sensors/lidar3d_4/points.type: 'sensor_msgs/msg/PointCloud2'
-      topics.sensors/lidar3d_4/points.rate: 20.0
-      topics.sensors/lidar3d_5/scan.type: 'sensor_msgs/msg/LaserScan'
-      topics.sensors/lidar3d_5/scan.rate: 20.0
-      topics.sensors/lidar3d_5/points.type: 'sensor_msgs/msg/PointCloud2'
-      topics.sensors/lidar3d_5/points.rate: 20.0
+      topics.sensors/lidar3d_2/scan.type: 'sensor_msgs/msg/LaserScan'
+      topics.sensors/lidar3d_2/scan.rate: 20.0
+      topics.sensors/lidar3d_2/points.type: 'sensor_msgs/msg/PointCloud2'
+      topics.sensors/lidar3d_2/points.rate: 20.0
+      topics.sensors/lidar3d_3/scan.type: 'sensor_msgs/msg/LaserScan'
+      topics.sensors/lidar3d_3/scan.rate: 20.0
+      topics.sensors/lidar3d_3/points.type: 'sensor_msgs/msg/PointCloud2'
+      topics.sensors/lidar3d_3/points.rate: 20.0
+      topics.sensors/lidar3d_6/scan.type: 'sensor_msgs/msg/LaserScan'
+      topics.sensors/lidar3d_6/scan.rate: 20.0
+      topics.sensors/lidar3d_6/points.type: 'sensor_msgs/msg/PointCloud2'
+      topics.sensors/lidar3d_6/points.rate: 20.0
+      topics.sensors/lidar3d_7/scan.type: 'sensor_msgs/msg/LaserScan'
+      topics.sensors/lidar3d_7/scan.rate: 20.0
+      topics.sensors/lidar3d_7/points.type: 'sensor_msgs/msg/PointCloud2'
+      topics.sensors/lidar3d_7/points.rate: 20.0
       topics.sensors/camera_0/color/image/compressed.type: 'sensor_msgs/msg/CompressedImage'
       topics.sensors/camera_0/color/image/compressed.rate: 20.0
       topics.sensors/camera_1/color/image/compressed.type: 'sensor_msgs/msg/CompressedImage'

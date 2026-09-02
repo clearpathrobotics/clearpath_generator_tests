@@ -12,12 +12,12 @@ def generate_launch_description():
     pkg_clearpath_sensors = FindPackageShare('clearpath_sensors')
 
     # Declare launch files
-    launch_file_ouster_os1 = PathJoinSubstitution([
-        pkg_clearpath_sensors, 'launch', 'ouster_os1.launch.py'])
+    launch_file_hesai_lidar = PathJoinSubstitution([
+        pkg_clearpath_sensors, 'launch', 'hesai_lidar.launch.py'])
 
     # Include launch files
-    launch_ouster_os1 = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([launch_file_ouster_os1]),
+    launch_hesai_lidar = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_hesai_lidar]),
         launch_arguments=
             [
                 (
@@ -43,5 +43,5 @@ def generate_launch_description():
 
     # Create LaunchDescription
     ld = LaunchDescription()
-    ld.add_action(launch_ouster_os1)
+    ld.add_action(launch_hesai_lidar)
     return ld
