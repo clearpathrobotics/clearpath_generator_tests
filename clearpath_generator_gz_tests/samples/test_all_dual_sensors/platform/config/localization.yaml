@@ -53,8 +53,8 @@ cpr_generic_e:
       imu7_differential: False
       imu7_queue_size: 10
       imu7_remove_gravitational_acceleration: True
-      imu9: 'sensors/gps_2/imu/data'
-      imu9_config: [False, False, False, False, False, False, False, False, False, False, False, True, True, False, False]
-      imu9_differential: False
-      imu9_queue_size: 10
-      imu9_remove_gravitational_acceleration: True
+      imu8: 'sensors/gps_2/imu/data'
+      imu8_config: [False, False, False, False, False, False, False, False, False, False, False, True, True, False, False]
+      imu8_differential: False
+      imu8_queue_size: 10
+      imu8_remove_gravitational_acceleration: True
