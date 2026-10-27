@@ -131,10 +131,62 @@ def generate_launch_description():
         ,
     )
 
+    node_camera_6_gz_depth_bridge = Node(
+        name='camera_6_gz_depth_bridge',
+        executable='image_bridge',
+        package='ros_gz_image',
+        namespace='cpr_generic_e/sensors/',
+        output='screen',
+        arguments=
+            [
+                '/cpr_generic_e/sensors/camera_6/depth_image'
+                ,
+            ]
+        ,
+        remappings=
+            [
+                (
+                    '/cpr_generic_e/sensors/camera_6/depth_image'
+                    ,
+                    '/cpr_generic_e/sensors/camera_6/stereo/image'
+                )
+                ,
+                (
+                    '/cpr_generic_e/sensors/camera_6/depth_image/compressed'
+                    ,
+                    '/cpr_generic_e/sensors/camera_6/stereo/compressed'
+                )
+                ,
+                (
+                    '/cpr_generic_e/sensors/camera_6/depth_image/compressedDepth'
+                    ,
+                    '/cpr_generic_e/sensors/camera_6/stereo/compressedDepth'
+                )
+                ,
+                (
+                    '/cpr_generic_e/sensors/camera_6/depth_image/theora'
+                    ,
+                    '/cpr_generic_e/sensors/camera_6/stereo/theora'
+                )
+                ,
+            ]
+        ,
+        parameters=
+            [
+                {
+                    'use_sim_time': True
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
     # Create LaunchDescription
     ld = LaunchDescription()
     ld.add_action(launch_arg_prefix)
     ld.add_action(node_camera_6_gz_bridge)
     ld.add_action(node_camera_6_static_tf)
     ld.add_action(node_camera_6_gz_image_bridge)
+    ld.add_action(node_camera_6_gz_depth_bridge)
     return ld
