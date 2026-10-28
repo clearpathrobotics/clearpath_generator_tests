@@ -158,6 +158,60 @@ def generate_launch_description():
                     '1.0'
                 )
                 ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
+                (
+                    'control_delay'
+                    ,
+                    '1.0'
+                )
+                ,
             ]
     )
 
@@ -540,6 +594,195 @@ def generate_launch_description():
         ,
     )
 
+    node_arm_23_ur_tool_comm = Node(
+        name='arm_23_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_23_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_24_ur_tool_comm = Node(
+        name='arm_24_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_24_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_25_ur_tool_comm = Node(
+        name='arm_25_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_25_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_26_ur_tool_comm = Node(
+        name='arm_26_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_26_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_27_ur_tool_comm = Node(
+        name='arm_27_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_27_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_28_ur_tool_comm = Node(
+        name='arm_28_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_28_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_29_ur_tool_comm = Node(
+        name='arm_29_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_29_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_30_ur_tool_comm = Node(
+        name='arm_30_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_30_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
+    node_arm_31_ur_tool_comm = Node(
+        name='arm_31_ur_tool_comm',
+        executable='tool_communication.py',
+        package='ur_robot_driver',
+        namespace='cpr_generic_e',
+        output='screen',
+        parameters=
+            [
+                {
+                    'robot_ip': '192.168.131.40'
+                    ,
+                    'tcp_port': 54321
+                    ,
+                    'device_name': '/tmp/arm_31_gripper'
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
     # Create LaunchDescription
     ld = LaunchDescription()
     ld.add_action(launch_manipulators)
@@ -561,4 +804,13 @@ def generate_launch_description():
     ld.add_action(node_arm_20_ur_tool_comm)
     ld.add_action(node_arm_21_ur_tool_comm)
     ld.add_action(node_arm_22_ur_tool_comm)
+    ld.add_action(node_arm_23_ur_tool_comm)
+    ld.add_action(node_arm_24_ur_tool_comm)
+    ld.add_action(node_arm_25_ur_tool_comm)
+    ld.add_action(node_arm_26_ur_tool_comm)
+    ld.add_action(node_arm_27_ur_tool_comm)
+    ld.add_action(node_arm_28_ur_tool_comm)
+    ld.add_action(node_arm_29_ur_tool_comm)
+    ld.add_action(node_arm_30_ur_tool_comm)
+    ld.add_action(node_arm_31_ur_tool_comm)
     return ld
