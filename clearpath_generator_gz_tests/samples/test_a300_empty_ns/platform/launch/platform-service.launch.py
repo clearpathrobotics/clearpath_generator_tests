@@ -21,9 +21,45 @@ def generate_launch_description():
         launch_arguments=
             [
                 (
-                    'setup_path'
+                    'robot_urdf'
                     ,
-                    '/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_gz_tests/samples/test_a300_empty_ns'
+                    '/etc/clearpath/robot.urdf.xacro'
+                )
+                ,
+                (
+                    'config_control'
+                    ,
+                    '/etc/clearpath/platform/config/control.yaml'
+                )
+                ,
+                (
+                    'config_localization'
+                    ,
+                    '/etc/clearpath/platform/config/localization.yaml'
+                )
+                ,
+                (
+                    'config_twist_mux'
+                    ,
+                    '/etc/clearpath/platform/config/twist_mux.yaml'
+                )
+                ,
+                (
+                    'config_interactive_markers'
+                    ,
+                    '/etc/clearpath/platform/config/teleop_interactive_markers.yaml'
+                )
+                ,
+                (
+                    'config_teleop_joy'
+                    ,
+                    '/etc/clearpath/platform/config/teleop_joy.yaml'
+                )
+                ,
+                (
+                    'controller'
+                    ,
+                    'ps4'
                 )
                 ,
                 (

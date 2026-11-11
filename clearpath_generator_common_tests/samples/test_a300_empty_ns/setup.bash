@@ -1,4 +1,4 @@
-# Bash setup generated at 2026-04-16 15:09:17.656108+00:00
+# Bash setup generated at 2026-11-11 15:28:43.662717+00:00
 # Core ROS setup
 source /opt/ros/jazzy/setup.bash
 # ROS configuration

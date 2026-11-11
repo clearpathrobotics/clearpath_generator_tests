@@ -10,21 +10,21 @@ def generate_launch_description():
 
     launch_arg_diagnostic_updater_params = DeclareLaunchArgument(
         'diagnostic_updater_params',
-        default_value='/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns/platform/config/diagnostic_updater.yaml',
+        default_value='/etc/clearpath/platform/config/diagnostic_updater.yaml',
         description='')
 
     diagnostic_updater_params = LaunchConfiguration('diagnostic_updater_params')
 
     launch_arg_diagnostic_aggregator_params = DeclareLaunchArgument(
         'diagnostic_aggregator_params',
-        default_value='/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns/platform/config/diagnostic_aggregator.yaml',
+        default_value='/etc/clearpath/platform/config/diagnostic_aggregator.yaml',
         description='')
 
     diagnostic_aggregator_params = LaunchConfiguration('diagnostic_aggregator_params')
 
     launch_arg_foxglove_bridge_parameters = DeclareLaunchArgument(
         'foxglove_bridge_parameters',
-        default_value='/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns/platform/config/foxglove_bridge.yaml',
+        default_value='/etc/clearpath/platform/config/foxglove_bridge.yaml',
         description='')
 
     foxglove_bridge_parameters = LaunchConfiguration('foxglove_bridge_parameters')
@@ -33,8 +33,8 @@ def generate_launch_description():
     pkg_clearpath_common = FindPackageShare('clearpath_common')
     pkg_clearpath_firmware = FindPackageShare('clearpath_firmware')
     pkg_clearpath_diagnostics = FindPackageShare('clearpath_diagnostics')
-    pkg_clearpath_ros2_socketcan_interface = FindPackageShare('clearpath_ros2_socketcan_interface')
     pkg_canopen_inventus_bringup = FindPackageShare('canopen_inventus_bringup')
+    pkg_clearpath_ros2_socketcan_interface = FindPackageShare('clearpath_ros2_socketcan_interface')
 
     # Declare launch files
     launch_file_platform = PathJoinSubstitution([
@@ -43,14 +43,14 @@ def generate_launch_description():
         pkg_clearpath_firmware, 'launch', 'proton.launch.py'])
     launch_file_diagnostics = PathJoinSubstitution([
         pkg_clearpath_diagnostics, 'launch', 'diagnostics.launch.py'])
+    launch_file_canopen_inventus = PathJoinSubstitution([
+        pkg_canopen_inventus_bringup, 'launch', 'inventus.launch.py'])
     launch_file_foxglove_bridge = PathJoinSubstitution([
         pkg_clearpath_diagnostics, 'launch', 'foxglove_bridge.launch.py'])
     launch_file_vcan0_receiver = PathJoinSubstitution([
         pkg_clearpath_ros2_socketcan_interface, 'launch', 'receiver.launch.py'])
     launch_file_vcan0_sender = PathJoinSubstitution([
         pkg_clearpath_ros2_socketcan_interface, 'launch', 'sender.launch.py'])
-    launch_file_canopen_inventus = PathJoinSubstitution([
-        pkg_canopen_inventus_bringup, 'launch', 'inventus.launch.py'])
 
     # Include launch files
     launch_platform = IncludeLaunchDescription(
@@ -58,9 +58,45 @@ def generate_launch_description():
         launch_arguments=
             [
                 (
-                    'setup_path'
+                    'robot_urdf'
                     ,
-                    '/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns'
+                    '/etc/clearpath/robot.urdf.xacro'
+                )
+                ,
+                (
+                    'config_control'
+                    ,
+                    '/etc/clearpath/platform/config/control.yaml'
+                )
+                ,
+                (
+                    'config_localization'
+                    ,
+                    '/etc/clearpath/platform/config/localization.yaml'
+                )
+                ,
+                (
+                    'config_twist_mux'
+                    ,
+                    '/etc/clearpath/platform/config/twist_mux.yaml'
+                )
+                ,
+                (
+                    'config_interactive_markers'
+                    ,
+                    '/etc/clearpath/platform/config/teleop_interactive_markers.yaml'
+                )
+                ,
+                (
+                    'config_teleop_joy'
+                    ,
+                    '/etc/clearpath/platform/config/teleop_joy.yaml'
+                )
+                ,
+                (
+                    'controller'
+                    ,
+                    'ps4'
                 )
                 ,
                 (
@@ -123,6 +159,73 @@ def generate_launch_description():
                     'aggregator_parameters'
                     ,
                     diagnostic_aggregator_params
+                )
+                ,
+            ]
+    )
+
+    launch_canopen_inventus = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([launch_file_canopen_inventus]),
+        launch_arguments=
+            [
+                (
+                    'namespace'
+                    ,
+                    '/platform/bms'
+                )
+                ,
+                (
+                    'interface'
+                    ,
+                    'vcan1'
+                )
+                ,
+                (
+                    'battery_count'
+                    ,
+                    '2'
+                )
+                ,
+                (
+                    'master_id'
+                    ,
+                    '49'
+                )
+                ,
+                (
+                    'battery_0_id'
+                    ,
+                    '49'
+                )
+                ,
+                (
+                    'battery_1_id'
+                    ,
+                    '50'
+                )
+                ,
+                (
+                    'battery_2_id'
+                    ,
+                    '51'
+                )
+                ,
+                (
+                    'battery_3_id'
+                    ,
+                    '52'
+                )
+                ,
+                (
+                    'battery_4_id'
+                    ,
+                    '53'
+                )
+                ,
+                (
+                    'battery_5_id'
+                    ,
+                    '54'
                 )
                 ,
             ]
@@ -281,73 +384,6 @@ def generate_launch_description():
             ]
     )
 
-    launch_canopen_inventus = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([launch_file_canopen_inventus]),
-        launch_arguments=
-            [
-                (
-                    'namespace'
-                    ,
-                    '/platform/bms'
-                )
-                ,
-                (
-                    'interface'
-                    ,
-                    'vcan1'
-                )
-                ,
-                (
-                    'battery_count'
-                    ,
-                    '2'
-                )
-                ,
-                (
-                    'master_id'
-                    ,
-                    '49'
-                )
-                ,
-                (
-                    'battery_0_id'
-                    ,
-                    '49'
-                )
-                ,
-                (
-                    'battery_1_id'
-                    ,
-                    '50'
-                )
-                ,
-                (
-                    'battery_2_id'
-                    ,
-                    '51'
-                )
-                ,
-                (
-                    'battery_3_id'
-                    ,
-                    '52'
-                )
-                ,
-                (
-                    'battery_4_id'
-                    ,
-                    '53'
-                )
-                ,
-                (
-                    'battery_5_id'
-                    ,
-                    '54'
-                )
-                ,
-            ]
-    )
-
     # Nodes
     node_battery_state_control = Node(
         name='battery_state_control',
@@ -359,7 +395,7 @@ def generate_launch_description():
             [
                 '-s'
                 ,
-                '/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns'
+                '/etc/clearpath'
                 ,
             ]
         ,
@@ -443,7 +479,7 @@ def generate_launch_description():
         ,
         parameters=
             [
-                '/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns/platform/config/control.yaml'
+                '/etc/clearpath/platform/config/control.yaml'
                 ,
             ]
         ,
@@ -500,10 +536,10 @@ def generate_launch_description():
     ld.add_action(launch_platform)
     ld.add_action(launch_proton)
     ld.add_action(launch_diagnostics)
+    ld.add_action(launch_canopen_inventus)
     ld.add_action(launch_foxglove_bridge)
     ld.add_action(launch_vcan0_receiver)
     ld.add_action(launch_vcan0_sender)
-    ld.add_action(launch_canopen_inventus)
     ld.add_action(node_battery_state_control)
     ld.add_action(node_wireless_watcher)
     ld.add_action(node_lighting_node)

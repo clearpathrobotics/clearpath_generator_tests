@@ -83,6 +83,12 @@ def generate_launch_description():
                 )
                 ,
                 (
+                    'controller'
+                    ,
+                    'ps4'
+                )
+                ,
+                (
                     'use_sim_time'
                     ,
                     'false'

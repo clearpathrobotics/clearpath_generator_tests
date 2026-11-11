@@ -11,7 +11,7 @@ def generate_launch_description():
     # Include Packages
 
     # Declare launch files
-    launch_file_imu_0 = '/home/tbaltovski/empty/src/clearpath_generator_tests/clearpath_generator_robot_tests/samples/test_a300_empty_ns/sensors/launch/imu_0.launch.py'
+    launch_file_imu_0 = '/etc/clearpath/sensors/launch/imu_0.launch.py'
 
     # Include launch files
     launch_imu_0 = IncludeLaunchDescription(
