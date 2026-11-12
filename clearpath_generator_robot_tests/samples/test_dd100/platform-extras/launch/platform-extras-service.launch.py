@@ -21,12 +21,6 @@ def generate_launch_description():
         launch_arguments=
             [
                 (
-                    'setup_path'
-                    ,
-                    '/etc/clearpath'
-                )
-                ,
-                (
                     'use_sim_time'
                     ,
                     'false'
