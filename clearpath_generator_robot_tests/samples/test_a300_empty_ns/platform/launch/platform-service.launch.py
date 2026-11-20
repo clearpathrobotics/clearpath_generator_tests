@@ -385,6 +385,31 @@ def generate_launch_description():
     )
 
     # Nodes
+    node_firmware_info = Node(
+        name='firmware_info',
+        executable='firmware_info.py',
+        package='clearpath_hardware_interfaces',
+        namespace='',
+        output='screen',
+        parameters=
+            [
+                {
+                    'expected_proton_major': 1
+                    ,
+                    'expected_proton_minor': 0
+                    ,
+                    'expected_proton_patch': 1
+                    ,
+                    'expected_platform_id': 3
+                    ,
+                    'firmware_info_timeout_sec': 3.0
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
     node_battery_state_control = Node(
         name='battery_state_control',
         executable='battery_state_control',
@@ -540,6 +565,7 @@ def generate_launch_description():
     ld.add_action(launch_foxglove_bridge)
     ld.add_action(launch_vcan0_receiver)
     ld.add_action(launch_vcan0_sender)
+    ld.add_action(node_firmware_info)
     ld.add_action(node_battery_state_control)
     ld.add_action(node_wireless_watcher)
     ld.add_action(node_lighting_node)
