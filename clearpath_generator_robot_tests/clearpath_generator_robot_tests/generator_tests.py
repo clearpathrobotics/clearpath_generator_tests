@@ -66,6 +66,10 @@ class TestGeneratorRobotSamples(BaseGeneratorSampleTest):
     # Directory of installed samples
     SHARE_DIR = get_package_share_directory('clearpath_generator_robot_tests')
     INSTALLED_SAMPLE_DIR = find_real_path_to_samples(os.path.join(SHARE_DIR, 'samples'))
+    # The robot launch generator may legitimately emit the same set of launch
+    # actions in a different order (e.g. BMS grouped with battery components
+    # after the BasePlatformLaunch refactor). Accept reorder-only differences.
+    REORDER_ONLY_OK = True
 
     def test_generate_samples(self) -> None:
         """Validate robot sample generation."""

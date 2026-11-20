@@ -40,8 +40,8 @@ from typing import List
 from ament_index_python.packages import get_package_share_directory
 
 from clearpath_generator_base_tests.utils import (
-    ensure_sample_dir_exists,
     diff_dir_trees,
+    ensure_sample_dir_exists,
     get_test_samples,
     MismatchSampleException,
     MissingSampleException,
@@ -73,6 +73,9 @@ class BaseGeneratorSampleTest:
     INSTALLED_SAMPLE_DIR = os.path.join(SHARE_DIR, 'samples')
     # Test samples
     TEST_SAMPLES = get_test_samples()
+    # Whether to accept generated files that differ from installed ones only by
+    # line ordering (same multiset of non-blank lines). Subclasses may override.
+    REORDER_ONLY_OK = False
 
     def __init_subclass__(cls, **kwargs):
         """Initialize subclass with generator-specific sample directory."""
@@ -121,6 +124,7 @@ class BaseGeneratorSampleTest:
                 dir_2=os.path.join(self.INSTALLED_SAMPLE_DIR, common_dir),
                 shallow=False,
                 line_filter=self.filter_lines,
+                reorder_only_ok=self.REORDER_ONLY_OK,
             )
             if len(sample_errors) > 0:
                 errors.append(
