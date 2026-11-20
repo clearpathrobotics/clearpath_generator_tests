@@ -16,6 +16,9 @@ dd100_0000:
       platform.analyzers.drive.path: 'Drive System'
       platform.analyzers.drive.expected: ['controller_manager: Controller Manager Activity', 'controller_manager: Controllers Activity', 'controller_manager: Hardware Components Activity']
       platform.analyzers.drive.contains: ['lynx', 'puma', 'sevcon', 'controller_manager', 'twist_mux', 'joy_node']
+      platform.analyzers.firmware_info.type: 'diagnostic_aggregator/GenericAnalyzer'
+      platform.analyzers.firmware_info.path: 'Firmware Info'
+      platform.analyzers.firmware_info.contains: ['Proton Firmware Info']
       use_sim_time: True
       platform.analyzers.mcu.type: 'diagnostic_aggregator/GenericAnalyzer'
       platform.analyzers.mcu.path: 'MCU'
