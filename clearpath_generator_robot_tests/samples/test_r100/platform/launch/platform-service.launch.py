@@ -440,6 +440,14 @@ def generate_launch_description():
         ,
     )
 
+    node_r100_sw_low_voltage_cutoff = Node(
+        name='r100_sw_low_voltage_cutoff',
+        executable='r100_sw_low_voltage_cutoff_node',
+        package='clearpath_hardware_interfaces',
+        namespace='r100_0000',
+        output='screen',
+    )
+
     # Processes
     process_configure_mcu = ExecuteProcess(
         shell=True,
@@ -484,5 +492,6 @@ def generate_launch_description():
     ld.add_action(node_imu_filter_madgwick)
     ld.add_action(node_lighting_node)
     ld.add_action(node_puma_control)
+    ld.add_action(node_r100_sw_low_voltage_cutoff)
     ld.add_action(process_configure_mcu)
     return ld
