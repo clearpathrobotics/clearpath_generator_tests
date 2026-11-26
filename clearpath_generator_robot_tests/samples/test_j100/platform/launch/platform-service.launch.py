@@ -159,6 +159,23 @@ def generate_launch_description():
         ,
     )
 
+    node_software_battery_cutoff = Node(
+        name='software_battery_cutoff',
+        executable='software_battery_cutoff_node',
+        package='clearpath_hardware_interfaces',
+        namespace='j100_0000',
+        output='screen',
+        parameters=
+            [
+                {
+                    'use_voltage_cutoff': False
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
     node_battery_state_estimator = Node(
         name='battery_state_estimator',
         executable='battery_state_estimator',
@@ -329,6 +346,7 @@ def generate_launch_description():
     ld.add_action(launch_foxglove_bridge)
     ld.add_action(node_micro_ros_agent)
     ld.add_action(node_battery_state_control)
+    ld.add_action(node_software_battery_cutoff)
     ld.add_action(node_battery_state_estimator)
     ld.add_action(node_wireless_watcher)
     ld.add_action(node_imu_filter_madgwick)

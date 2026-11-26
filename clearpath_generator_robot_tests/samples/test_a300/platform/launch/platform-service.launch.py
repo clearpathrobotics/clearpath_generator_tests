@@ -361,6 +361,23 @@ def generate_launch_description():
         ,
     )
 
+    node_software_battery_cutoff = Node(
+        name='software_battery_cutoff',
+        executable='software_battery_cutoff_node',
+        package='clearpath_hardware_interfaces',
+        namespace='a300_00000',
+        output='screen',
+        parameters=
+            [
+                {
+                    'use_voltage_cutoff': False
+                    ,
+                }
+                ,
+            ]
+        ,
+    )
+
     node_wireless_watcher = Node(
         name='wireless_watcher',
         executable='wireless_watcher',
@@ -463,14 +480,6 @@ def generate_launch_description():
         ,
     )
 
-    node_a300_sw_low_soc_cutoff = Node(
-        name='a300_sw_low_soc_cutoff',
-        executable='sw_low_soc_cutoff_node',
-        package='clearpath_hardware_interfaces',
-        namespace='a300_00000',
-        output='screen',
-    )
-
     node_pinout_control_node = Node(
         name='pinout_control_node',
         executable='pinout_control_node',
@@ -527,11 +536,11 @@ def generate_launch_description():
     ld.add_action(launch_canopen_inventus)
     ld.add_action(node_micro_ros_agent)
     ld.add_action(node_battery_state_control)
+    ld.add_action(node_software_battery_cutoff)
     ld.add_action(node_wireless_watcher)
     ld.add_action(node_lighting_node)
     ld.add_action(node_lynx_control)
     ld.add_action(node_a300_fan_control)
-    ld.add_action(node_a300_sw_low_soc_cutoff)
     ld.add_action(node_pinout_control_node)
     ld.add_action(process_configure_mcu)
     return ld
